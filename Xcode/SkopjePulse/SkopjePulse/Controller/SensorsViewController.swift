@@ -27,3 +27,9 @@ class SensorsViewController: UIViewController, Storyboarded {
         sensorsTableView.delaysContentTouches = false
     }
 }
+
+extension SensorsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+}

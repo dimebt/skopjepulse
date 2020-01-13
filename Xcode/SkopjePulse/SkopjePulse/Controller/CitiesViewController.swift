@@ -21,7 +21,7 @@ class CitiesViewController: UIViewController, Storyboarded {
         
         
         
-        let sensorsEndpointBitola = EndpointFactory.create(for: .Bitola, endpoint: .Sensors)!
+        let sensorsEndpointBitola = EndpointFactory.create(for: PulseEco.bitola, endpoint: .Sensors)!
         //let sensorData24h = EndpointFactory.create(for: .Skopje, endpoint: .Data24h)!
         let fetcher = NetworkFetcher<Sensors>()
         fetcher.fetch(from: sensorsEndpointBitola) { result in

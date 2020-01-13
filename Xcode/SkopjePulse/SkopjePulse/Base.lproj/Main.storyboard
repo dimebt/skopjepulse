@@ -6,25 +6,59 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Cities View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="CitiesViewController" id="BYZ-38-t0r" customClass="CitiesViewController" customModule="SkopjePulse" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="GradientView" customModule="SkopjePulse" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WDB-eL-yzT">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
-                                <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="qbz-Kx-tzK">
+                                        <rect key="frame" x="20" y="106" width="374" height="89"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pulse-logo" translatesAutoresizingMaskIntoConstraints="NO" id="MdO-TL-wF1">
+                                        <rect key="frame" x="40" y="52" width="334" height="38"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search city" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Um5-fu-ONN">
+                                        <rect key="frame" x="20" y="98" width="115" height="29"/>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="ZKw-ev-pWn"/>
+                                    <constraint firstItem="MdO-TL-wF1" firstAttribute="leading" secondItem="WDB-eL-yzT" secondAttribute="leading" constant="40" id="1aE-8b-P0d"/>
+                                    <constraint firstItem="qbz-Kx-tzK" firstAttribute="top" secondItem="Um5-fu-ONN" secondAttribute="bottom" constant="-21" id="54x-fr-L7e"/>
+                                    <constraint firstAttribute="trailing" secondItem="MdO-TL-wF1" secondAttribute="trailing" constant="40" id="ARY-Bi-wqs"/>
+                                    <constraint firstItem="qbz-Kx-tzK" firstAttribute="top" secondItem="MdO-TL-wF1" secondAttribute="bottom" constant="16" id="Pem-sG-Shu"/>
+                                    <constraint firstAttribute="height" constant="200" id="ZKw-ev-pWn"/>
+                                    <constraint firstItem="Um5-fu-ONN" firstAttribute="leading" secondItem="qbz-Kx-tzK" secondAttribute="leading" id="ghR-S0-3kB"/>
+                                    <constraint firstItem="qbz-Kx-tzK" firstAttribute="leading" secondItem="WDB-eL-yzT" secondAttribute="leading" constant="20" id="lOh-rR-oix"/>
+                                    <constraint firstAttribute="trailing" secondItem="qbz-Kx-tzK" secondAttribute="trailing" constant="20" id="tYQ-41-cDU"/>
+                                    <constraint firstAttribute="bottom" secondItem="qbz-Kx-tzK" secondAttribute="bottom" constant="5" id="usx-Vl-GOT"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Um5-fu-ONN" secondAttribute="trailing" constant="20" symbolic="YES" id="yiM-a5-QI6"/>
+                                    <constraint firstItem="MdO-TL-wF1" firstAttribute="top" secondItem="WDB-eL-yzT" secondAttribute="top" constant="52" id="z3M-H0-jac"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lBC-CL-1jA">
-                                <rect key="frame" x="0.0" y="100" width="414" height="796"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <rect key="frame" x="0.0" y="200" width="414" height="696"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cityCell" rowHeight="50" id="p5v-3T-M42">
                                         <rect key="frame" x="0.0" y="28" width="414" height="50"/>
@@ -40,7 +74,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="WDB-eL-yzT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4pc-J6-2v8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WDB-eL-yzT" secondAttribute="trailing" id="57K-Q2-qKT"/>
@@ -51,6 +85,14 @@
                             <constraint firstItem="lBC-CL-1jA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qLP-2g-aJQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                <color key="value" red="0.074509803921568626" green="0.062745098039215685" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                <color key="value" red="0.21568627450980393" green="0.20784313725490194" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="cityTableView" destination="lBC-CL-1jA" id="heE-dU-iTo"/>
@@ -64,13 +106,49 @@
         <scene sceneID="P7q-DO-mAJ">
             <objects>
                 <viewController storyboardIdentifier="SensorsViewController" id="Uk6-UB-4ID" customClass="SensorsViewController" customModule="SkopjePulse" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="EUf-JH-Cmg">
+                    <view key="view" contentMode="scaleToFill" id="EUf-JH-Cmg" customClass="GradientView" customModule="SkopjePulse" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TmX-RH-NCG">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="P2X-og-kME">
+                                        <rect key="frame" x="20" y="106" width="374" height="89"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pulse-logo" translatesAutoresizingMaskIntoConstraints="NO" id="NsH-Ww-iNy">
+                                        <rect key="frame" x="40" y="52" width="334" height="38"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search city" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szN-Q6-QoO">
+                                        <rect key="frame" x="20" y="98" width="115" height="29"/>
+                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="P2X-og-kME" secondAttribute="trailing" constant="20" id="4km-pn-TIA"/>
+                                    <constraint firstItem="NsH-Ww-iNy" firstAttribute="leading" secondItem="TmX-RH-NCG" secondAttribute="leading" constant="40" id="59h-Ns-WoG"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="szN-Q6-QoO" secondAttribute="trailing" constant="20" symbolic="YES" id="Hh6-6E-b1I"/>
+                                    <constraint firstItem="P2X-og-kME" firstAttribute="top" secondItem="szN-Q6-QoO" secondAttribute="bottom" constant="-21" id="NWE-Lq-pIa"/>
+                                    <constraint firstItem="P2X-og-kME" firstAttribute="top" secondItem="NsH-Ww-iNy" secondAttribute="bottom" constant="16" id="SU1-Up-uJ9"/>
+                                    <constraint firstItem="NsH-Ww-iNy" firstAttribute="top" secondItem="TmX-RH-NCG" secondAttribute="top" constant="52" id="Y1Q-va-nXt"/>
+                                    <constraint firstAttribute="height" constant="200" id="cuD-s7-Pw6"/>
+                                    <constraint firstAttribute="trailing" secondItem="NsH-Ww-iNy" secondAttribute="trailing" constant="40" id="qpn-fP-KQN"/>
+                                    <constraint firstItem="P2X-og-kME" firstAttribute="leading" secondItem="TmX-RH-NCG" secondAttribute="leading" constant="20" id="w64-aJ-34V"/>
+                                    <constraint firstAttribute="bottom" secondItem="P2X-og-kME" secondAttribute="bottom" constant="5" id="xuL-PL-23M"/>
+                                    <constraint firstItem="szN-Q6-QoO" firstAttribute="leading" secondItem="P2X-og-kME" secondAttribute="leading" id="zBf-k2-6ux"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OMa-na-g6R">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <rect key="frame" x="0.0" y="200" width="414" height="696"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sensorCell" rowHeight="94" id="Zex-0X-bod" customClass="SensorTableViewCell" customModule="SkopjePulse" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="94"/>
@@ -81,16 +159,30 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="Uk6-UB-4ID" id="J8K-mb-t7v"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="TmX-RH-NCG" firstAttribute="leading" secondItem="tX7-04-car" secondAttribute="leading" id="5gH-5M-wLS"/>
+                            <constraint firstItem="TmX-RH-NCG" firstAttribute="trailing" secondItem="tX7-04-car" secondAttribute="trailing" id="9aa-pn-K2O"/>
                             <constraint firstAttribute="bottom" secondItem="OMa-na-g6R" secondAttribute="bottom" id="It9-cv-2m7"/>
                             <constraint firstItem="tX7-04-car" firstAttribute="trailing" secondItem="OMa-na-g6R" secondAttribute="trailing" id="LCv-wB-5pJ"/>
-                            <constraint firstItem="OMa-na-g6R" firstAttribute="top" secondItem="tX7-04-car" secondAttribute="top" id="Ruh-eS-iat"/>
+                            <constraint firstItem="TmX-RH-NCG" firstAttribute="top" secondItem="EUf-JH-Cmg" secondAttribute="top" id="Mwy-Ib-iK1"/>
+                            <constraint firstItem="OMa-na-g6R" firstAttribute="top" secondItem="TmX-RH-NCG" secondAttribute="bottom" id="Ruh-eS-iat"/>
                             <constraint firstItem="OMa-na-g6R" firstAttribute="leading" secondItem="tX7-04-car" secondAttribute="leading" id="nnI-gI-rRy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tX7-04-car"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                <color key="value" red="0.074509803921568626" green="0.062745098039215685" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                <color key="value" red="0.21568627450980393" green="0.20784313725490194" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="sensorsTableView" destination="OMa-na-g6R" id="tpt-2w-6s7"/>
@@ -101,4 +193,7 @@
             <point key="canvasLocation" x="892.75362318840587" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pulse-logo" width="167" height="38"/>
+    </resources>
 </document>

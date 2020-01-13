@@ -20,7 +20,7 @@ class SensorsPresenter: NSObject {
     }
     
     func fetch() {
-        let endpoint = EndpointFactory.create(for: .Bitola, endpoint: .Sensors)!
+        let endpoint = EndpointFactory.create(for: self.city, endpoint: .Sensors)!
         self.fetchService.fetch(from: endpoint) { (result) in
             switch result {
             case .success(let sensors):

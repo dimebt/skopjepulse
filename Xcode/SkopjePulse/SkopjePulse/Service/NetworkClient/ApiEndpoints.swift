@@ -20,13 +20,6 @@ import Foundation
     https://[CITY].pulse.eco/rest/data24h
 */
 
-enum PulseCity: String {
-    case Skopje
-    case Bitola
-    case Tetovo
-    case Ohrid
-}
-
 struct PulseEco {
     static let skopje = City(name: "Skopje")
     static let bitola = City(name: "Bitola")
@@ -69,13 +62,13 @@ struct EndpointFactory {
     /// - Parameters:
     ///   - city: City that Pulse.eco supports
     ///   - endpoint: Endpoint for the Sensors or for the sensors data for the last 24h
-    public static func create(for city: PulseCity, endpoint: Endpoint) -> URL? {
+    public static func create(for city: City, endpoint: Endpoint) -> URL? {
         switch endpoint {
         case .Sensors:
-            guard let url = URL(string: "https://\(city.rawValue.lowercased()).pulse.eco/rest/sensor") else { return nil}
+            guard let url = URL(string: "https://\(city.name.lowercased()).pulse.eco/rest/sensor") else { return nil}
             return url
         case .Data24h:
-            guard let url = URL(string: "https://\(city.rawValue.lowercased()).pulse.eco/rest/data24h") else { return nil}
+            guard let url = URL(string: "https://\(city.name.lowercased()).pulse.eco/rest/data24h") else { return nil}
             return url
         }
     }

@@ -3,4 +3,85 @@
    uuid = "CC17F5AB-0E6D-45B9-9FFB-8DD4BBE08EB5"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ADD95F63-2B5B-4C0F-9F8A-55BE5698FB40"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SkopjePulse/Presenter/SensorsPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "init(fetchService:city:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "ADD95F63-2B5B-4C0F-9F8A-55BE5698FB40 - d7c1448da90ca17c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "default argument 0 of SkopjePulse.SensorsPresenter.init(fetchService: SkopjePulse.NetworkFetcher&lt;Swift.Array&lt;SkopjePulse.Sensor&gt;&gt;, city: SkopjePulse.City) -&gt; SkopjePulse.SensorsPresenter"
+                  moduleName = "SkopjePulse"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dimitarstefanovski/Downloads/iOS%20Development/SkopjePusle/gitHub/skopjepulse/Xcode/SkopjePulse/SkopjePulse/Presenter/SensorsPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "11">
+               </Location>
+               <Location
+                  uuid = "ADD95F63-2B5B-4C0F-9F8A-55BE5698FB40 - 1977f25967d3fd3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SkopjePulse.SensorsPresenter.__allocating_init(fetchService: SkopjePulse.NetworkFetcher&lt;Swift.Array&lt;SkopjePulse.Sensor&gt;&gt;, city: SkopjePulse.City) -&gt; SkopjePulse.SensorsPresenter"
+                  moduleName = "SkopjePulse"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dimitarstefanovski/Downloads/iOS%20Development/SkopjePusle/gitHub/skopjepulse/Xcode/SkopjePulse/SkopjePulse/Presenter/SensorsPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "ADD95F63-2B5B-4C0F-9F8A-55BE5698FB40 - 2484326f30e4ca12"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SkopjePulse.SensorsPresenter.init(fetchService: SkopjePulse.NetworkFetcher&lt;Swift.Array&lt;SkopjePulse.Sensor&gt;&gt;, city: SkopjePulse.City) -&gt; SkopjePulse.SensorsPresenter"
+                  moduleName = "SkopjePulse"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dimitarstefanovski/Downloads/iOS%20Development/SkopjePusle/gitHub/skopjepulse/Xcode/SkopjePulse/SkopjePulse/Presenter/SensorsPresenter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "50">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FE8468C6-CB5C-400A-A40B-C9D2067BA5E9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SkopjePulse/Presenter/SensorsPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "fetch()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
