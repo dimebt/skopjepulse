@@ -14,4 +14,8 @@ class SensorTableViewCell: UITableViewCell {
     @IBOutlet weak var disableSensor: UIButton!
     @IBOutlet weak var sensorActivity: UIButton!
     
+    public func configure(with sensor: Sensor) {
+        self.sensorTitle.text = sensor.description
+    }
+    
 }

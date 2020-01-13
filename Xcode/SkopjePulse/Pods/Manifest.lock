@@ -1,16 +1,20 @@
 PODS:
   - Device (3.2.1)
+  - lottie-ios (3.1.5)
 
 DEPENDENCIES:
   - Device (~> 3.2.1)
+  - lottie-ios
 
 SPEC REPOS:
   trunk:
     - Device
+    - lottie-ios
 
 SPEC CHECKSUMS:
   Device: 0738862dd8a30856b4bd9e21cb9b728873d21392
+  lottie-ios: 32bf84389337d86fbc8b12266e88452e0abf1dee
 
-PODFILE CHECKSUM: aa330ac3e62e130763bf53170e33776761463859
+PODFILE CHECKSUM: 739f186f9cd79f7d547f359b34b77882146a6c85
 
 COCOAPODS: 1.8.4

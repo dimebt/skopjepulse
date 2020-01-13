@@ -6,7 +6,8 @@ target 'SkopjePulse' do
   use_frameworks!
 
   # Pods for SkopjePulse
-  pod "Device", '~> 3.2.1'
+  pod 'Device', '~> 3.2.1'
+  pod 'lottie-ios'
 
   target 'SkopjePulseTests' do
     inherit! :search_paths

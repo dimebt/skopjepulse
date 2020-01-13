@@ -17,7 +17,21 @@ class SensorsViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        showLoader()
+        
         configureSensorTableView()
+        
+        let sensorsEndpointBitola = EndpointFactory.create(for: presenter.city, endpoint: .Sensors)!
+        presenter.fetchService.fetch(from: sensorsEndpointBitola) { (result) in
+            switch result {
+            case .success(let sensors):
+                self.presenter.sensors = sensors
+                self.sensorsTableView.reloadData()
+                self.hideLoader()
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
     private func configureSensorTableView() {
