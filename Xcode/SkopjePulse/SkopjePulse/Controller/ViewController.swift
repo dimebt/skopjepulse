@@ -14,5 +14,13 @@ class ViewController: UIViewController, Storyboarded {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let sensorsEndpoint = EndpointFactory.create(for: .Bitola, endpoint: .Sensors)!
+        let sensorData24h = EndpointFactory.create(for: .Skopje, endpoint: .Data24h)!
+        
+        let fetcher = NetworkFetcher<SensorData>()
+        fetcher.fetch(from: sensorData24h) { result in
+            print(result)
+        }
     }
 }

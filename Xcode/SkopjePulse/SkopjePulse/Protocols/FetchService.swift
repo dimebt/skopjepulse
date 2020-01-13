@@ -10,12 +10,5 @@ import Foundation
 
 protocol FetchService {
     associatedtype T
-    func fetch(from url: String, completion: @escaping (Result<T,Error>) -> Void)
-}
-
-class JsonFetcher: FetchService {
-    
-    func fetch(from url: String, completion: @escaping (Result<Int, Error>) -> Void) {
-        
-    }
+    func fetch(from url: URL, completion: @escaping (Result<T,Error>) -> Void)
 }

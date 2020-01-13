@@ -16,13 +16,20 @@
 		4615EE2C23CB1CC900595F77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4615EE2A23CB1CC900595F77 /* Main.storyboard */; };
 		4615EE2E23CB1CCE00595F77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4615EE2D23CB1CCE00595F77 /* Assets.xcassets */; };
 		4615EE3123CB1CCE00595F77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4615EE2F23CB1CCE00595F77 /* LaunchScreen.storyboard */; };
-		4615EE3C23CB1CCF00595F77 /* SkopjePulseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4615EE3B23CB1CCF00595F77 /* SkopjePulseTests.swift */; };
 		4615EE4723CB1D2900595F77 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4615EE4623CB1D2900595F77 /* Database.swift */; };
 		4615EE4E23CB248A00595F77 /* FetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4615EE4D23CB248A00595F77 /* FetchService.swift */; };
+		4615EE5323CB455D00595F77 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4615EE5223CB455D00595F77 /* Sensor.swift */; };
+		4615EE5523CB46B800595F77 /* SensorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4615EE5423CB46B800595F77 /* SensorData.swift */; };
+		4615EE5823CB480A00595F77 /* ApiEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4615EE5723CB480A00595F77 /* ApiEndpoints.swift */; };
+		4615EE5C23CB9A9F00595F77 /* NetworkFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4615EE5B23CB9A9F00595F77 /* NetworkFetcher.swift */; };
+		4651A9AA23CC828900985EDC /* TestStringToDateConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4651A9A923CC828900985EDC /* TestStringToDateConversion.swift */; };
+		466BCA4523CC798F0003F469 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466BCA4423CC798F0003F469 /* Date.swift */; };
+		466BCA4723CC79960003F469 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466BCA4623CC79960003F469 /* String.swift */; };
+		466BCA4A23CC79F40003F469 /* DateBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466BCA4923CC79F40003F469 /* DateBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4615EE3823CB1CCF00595F77 /* PBXContainerItemProxy */ = {
+		4651A9A423CC826600985EDC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4615EE1123CB1CC900595F77 /* Project object */;
 			proxyType = 1;
@@ -43,11 +50,18 @@
 		4615EE2D23CB1CCE00595F77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4615EE3023CB1CCE00595F77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4615EE3223CB1CCE00595F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4615EE3723CB1CCF00595F77 /* SkopjePulseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkopjePulseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4615EE3B23CB1CCF00595F77 /* SkopjePulseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkopjePulseTests.swift; sourceTree = "<group>"; };
-		4615EE3D23CB1CCF00595F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4615EE4623CB1D2900595F77 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		4615EE4D23CB248A00595F77 /* FetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchService.swift; sourceTree = "<group>"; };
+		4615EE5223CB455D00595F77 /* Sensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
+		4615EE5423CB46B800595F77 /* SensorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorData.swift; sourceTree = "<group>"; };
+		4615EE5723CB480A00595F77 /* ApiEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoints.swift; sourceTree = "<group>"; };
+		4615EE5B23CB9A9F00595F77 /* NetworkFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFetcher.swift; sourceTree = "<group>"; };
+		4651A99F23CC826600985EDC /* SkopjePulseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkopjePulseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4651A9A323CC826600985EDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4651A9A923CC828900985EDC /* TestStringToDateConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStringToDateConversion.swift; sourceTree = "<group>"; };
+		466BCA4423CC798F0003F469 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		466BCA4623CC79960003F469 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		466BCA4923CC79F40003F469 /* DateBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +72,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4615EE3423CB1CCF00595F77 /* Frameworks */ = {
+		4651A99C23CC826600985EDC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -72,7 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				4615EE1B23CB1CC900595F77 /* SkopjePulse */,
-				4615EE3A23CB1CCF00595F77 /* SkopjePulseTests */,
+				4651A9A023CC826600985EDC /* SkopjePulseTests */,
 				4615EE1A23CB1CC900595F77 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,7 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				4615EE1923CB1CC900595F77 /* SkopjePulse.app */,
-				4615EE3723CB1CCF00595F77 /* SkopjePulseTests.xctest */,
+				4651A99F23CC826600985EDC /* SkopjePulseTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,11 +104,13 @@
 			isa = PBXGroup;
 			children = (
 				4615EE4B23CB1D8200595F77 /* AppDelegate */,
+				4615EE2223CB1CC900595F77 /* Protocols */,
+				466BCA4323CC79730003F469 /* Extensions */,
+				466BCA4823CC79D70003F469 /* Service */,
+				4615EE2723CB1CC900595F77 /* Coordinators */,
 				4615EE4A23CB1D6E00595F77 /* Model */,
 				4615EE4923CB1D6300595F77 /* ViewModel */,
 				4615EE4823CB1D5900595F77 /* Controller */,
-				4615EE2223CB1CC900595F77 /* Protocols */,
-				4615EE2723CB1CC900595F77 /* Coordinators */,
 				4615EE2A23CB1CC900595F77 /* Main.storyboard */,
 				4615EE2D23CB1CCE00595F77 /* Assets.xcassets */,
 				4615EE2F23CB1CCE00595F77 /* LaunchScreen.storyboard */,
@@ -106,10 +122,10 @@
 		4615EE2223CB1CC900595F77 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				4615EE4D23CB248A00595F77 /* FetchService.swift */,
 				4615EE2323CB1CC900595F77 /* Storyboarded.swift */,
 				4615EE2523CB1CC900595F77 /* Coordinator.swift */,
 				4615EE4623CB1D2900595F77 /* Database.swift */,
-				4615EE4D23CB248A00595F77 /* FetchService.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -120,15 +136,6 @@
 				4615EE2823CB1CC900595F77 /* MainCoordinator.swift */,
 			);
 			path = Coordinators;
-			sourceTree = "<group>";
-		};
-		4615EE3A23CB1CCF00595F77 /* SkopjePulseTests */ = {
-			isa = PBXGroup;
-			children = (
-				4615EE3B23CB1CCF00595F77 /* SkopjePulseTests.swift */,
-				4615EE3D23CB1CCF00595F77 /* Info.plist */,
-			);
-			path = SkopjePulseTests;
 			sourceTree = "<group>";
 		};
 		4615EE4823CB1D5900595F77 /* Controller */ = {
@@ -149,6 +156,8 @@
 		4615EE4A23CB1D6E00595F77 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4615EE5223CB455D00595F77 /* Sensor.swift */,
+				4615EE5423CB46B800595F77 /* SensorData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -160,6 +169,50 @@
 				4615EE1E23CB1CC900595F77 /* SceneDelegate.swift */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		4615EE5623CB47D100595F77 /* NetworkClient */ = {
+			isa = PBXGroup;
+			children = (
+				4615EE5723CB480A00595F77 /* ApiEndpoints.swift */,
+				4615EE5B23CB9A9F00595F77 /* NetworkFetcher.swift */,
+			);
+			path = NetworkClient;
+			sourceTree = "<group>";
+		};
+		4651A9A023CC826600985EDC /* SkopjePulseTests */ = {
+			isa = PBXGroup;
+			children = (
+				4651A9A323CC826600985EDC /* Info.plist */,
+				4651A9A923CC828900985EDC /* TestStringToDateConversion.swift */,
+			);
+			path = SkopjePulseTests;
+			sourceTree = "<group>";
+		};
+		466BCA4323CC79730003F469 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				466BCA4423CC798F0003F469 /* Date.swift */,
+				466BCA4623CC79960003F469 /* String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		466BCA4823CC79D70003F469 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				46B859D723CC85E900EB0B45 /* DateBuilder */,
+				4615EE5623CB47D100595F77 /* NetworkClient */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		46B859D723CC85E900EB0B45 /* DateBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				466BCA4923CC79F40003F469 /* DateBuilder.swift */,
+			);
+			path = DateBuilder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,22 +235,22 @@
 			productReference = 4615EE1923CB1CC900595F77 /* SkopjePulse.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4615EE3623CB1CCF00595F77 /* SkopjePulseTests */ = {
+		4651A99E23CC826600985EDC /* SkopjePulseTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4615EE4323CB1CCF00595F77 /* Build configuration list for PBXNativeTarget "SkopjePulseTests" */;
+			buildConfigurationList = 4651A9A623CC826600985EDC /* Build configuration list for PBXNativeTarget "SkopjePulseTests" */;
 			buildPhases = (
-				4615EE3323CB1CCF00595F77 /* Sources */,
-				4615EE3423CB1CCF00595F77 /* Frameworks */,
-				4615EE3523CB1CCF00595F77 /* Resources */,
+				4651A99B23CC826600985EDC /* Sources */,
+				4651A99C23CC826600985EDC /* Frameworks */,
+				4651A99D23CC826600985EDC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4615EE3923CB1CCF00595F77 /* PBXTargetDependency */,
+				4651A9A523CC826600985EDC /* PBXTargetDependency */,
 			);
 			name = SkopjePulseTests;
 			productName = SkopjePulseTests;
-			productReference = 4615EE3723CB1CCF00595F77 /* SkopjePulseTests.xctest */;
+			productReference = 4651A99F23CC826600985EDC /* SkopjePulseTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -213,7 +266,7 @@
 					4615EE1823CB1CC900595F77 = {
 						CreatedOnToolsVersion = 11.3;
 					};
-					4615EE3623CB1CCF00595F77 = {
+					4651A99E23CC826600985EDC = {
 						CreatedOnToolsVersion = 11.3;
 						TestTargetID = 4615EE1823CB1CC900595F77;
 					};
@@ -233,7 +286,7 @@
 			projectRoot = "";
 			targets = (
 				4615EE1823CB1CC900595F77 /* SkopjePulse */,
-				4615EE3623CB1CCF00595F77 /* SkopjePulseTests */,
+				4651A99E23CC826600985EDC /* SkopjePulseTests */,
 			);
 		};
 /* End PBXProject section */
@@ -249,7 +302,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4615EE3523CB1CCF00595F77 /* Resources */ = {
+		4651A99D23CC826600985EDC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -266,29 +319,36 @@
 				4615EE4E23CB248A00595F77 /* FetchService.swift in Sources */,
 				4615EE2123CB1CC900595F77 /* ViewController.swift in Sources */,
 				4615EE2923CB1CC900595F77 /* MainCoordinator.swift in Sources */,
+				4615EE5523CB46B800595F77 /* SensorData.swift in Sources */,
+				466BCA4723CC79960003F469 /* String.swift in Sources */,
 				4615EE1D23CB1CC900595F77 /* AppDelegate.swift in Sources */,
+				4615EE5323CB455D00595F77 /* Sensor.swift in Sources */,
 				4615EE2623CB1CC900595F77 /* Coordinator.swift in Sources */,
 				4615EE1F23CB1CC900595F77 /* SceneDelegate.swift in Sources */,
 				4615EE4723CB1D2900595F77 /* Database.swift in Sources */,
 				4615EE2423CB1CC900595F77 /* Storyboarded.swift in Sources */,
+				4615EE5C23CB9A9F00595F77 /* NetworkFetcher.swift in Sources */,
+				466BCA4A23CC79F40003F469 /* DateBuilder.swift in Sources */,
+				466BCA4523CC798F0003F469 /* Date.swift in Sources */,
+				4615EE5823CB480A00595F77 /* ApiEndpoints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4615EE3323CB1CCF00595F77 /* Sources */ = {
+		4651A99B23CC826600985EDC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4615EE3C23CB1CCF00595F77 /* SkopjePulseTests.swift in Sources */,
+				4651A9AA23CC828900985EDC /* TestStringToDateConversion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4615EE3923CB1CCF00595F77 /* PBXTargetDependency */ = {
+		4651A9A523CC826600985EDC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4615EE1823CB1CC900595F77 /* SkopjePulse */;
-			targetProxy = 4615EE3823CB1CCF00595F77 /* PBXContainerItemProxy */;
+			targetProxy = 4651A9A423CC826600985EDC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -462,15 +522,13 @@
 			};
 			name = Release;
 		};
-		4615EE4423CB1CCF00595F77 /* Debug */ = {
+		4651A9A723CC826600985EDC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q3XKCXZU4K;
 				INFOPLIST_FILE = SkopjePulseTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -484,15 +542,13 @@
 			};
 			name = Debug;
 		};
-		4615EE4523CB1CCF00595F77 /* Release */ = {
+		4651A9A823CC826600985EDC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q3XKCXZU4K;
 				INFOPLIST_FILE = SkopjePulseTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -527,11 +583,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4615EE4323CB1CCF00595F77 /* Build configuration list for PBXNativeTarget "SkopjePulseTests" */ = {
+		4651A9A623CC826600985EDC /* Build configuration list for PBXNativeTarget "SkopjePulseTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4615EE4423CB1CCF00595F77 /* Debug */,
-				4615EE4523CB1CCF00595F77 /* Release */,
+				4651A9A723CC826600985EDC /* Debug */,
+				4651A9A823CC826600985EDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
