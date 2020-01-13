@@ -1,0 +1,6 @@
+framework module Pods_SkopjePulse {
+  umbrella header "Pods-SkopjePulse-umbrella.h"
+
+  export *
+  module * { export * }
+}

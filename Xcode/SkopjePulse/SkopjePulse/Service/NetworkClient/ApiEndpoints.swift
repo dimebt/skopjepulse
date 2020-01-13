@@ -27,6 +27,36 @@ enum PulseCity: String {
     case Ohrid
 }
 
+struct PulseEco {
+    static let skopje = City(name: "Skopje")
+    static let bitola = City(name: "Bitola")
+    static let brasov = City(name: "Brasov")
+    static let copenhagen = City(name: "Copenhagen")
+    static let ohrid = City(name: "Ohrid")
+    static let clujNapoca = City(name: "Cluj-Napoca")
+    static let codlea = City(name: "Codlea")
+    static let gostivar = City(name: "Gostivar")
+    static let grandRapids = City(name: "Grand Rapids")
+    static let kichevo = City(name: "Kichevo")
+    static let kumanovo = City(name: "Kumanovo")
+    static let nis = City(name: "Nis")
+    
+    public static let cities = [
+        skopje,
+        bitola,
+        brasov,
+        copenhagen,
+        ohrid,
+        clujNapoca,
+        codlea,
+        gostivar,
+        grandRapids,
+        kichevo,
+        kumanovo,
+        nis
+    ]
+}
+
 enum Endpoint {
     case Sensors
     case Data24h

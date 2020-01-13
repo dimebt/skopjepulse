@@ -20,7 +20,9 @@ class NetworkFetcher<T: Decodable>: FetchService {
             }
             guard let jsonData = data else { return }
             do {
-                let result = try JSONDecoder().decode(T.self, from: jsonData)
+                let decoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .formatted(DateFormatter.pulseStamp)
+                let result = try decoder.decode(T.self, from: jsonData)
                 DispatchQueue.main.async { () -> Void in
                     completion(.success(result))
                 }

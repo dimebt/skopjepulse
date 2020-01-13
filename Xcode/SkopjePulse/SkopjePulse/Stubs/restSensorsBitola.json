@@ -1,0 +1,58 @@
+[
+{
+"sensorId": "c3f3da9b-9fd3-4037-94d3-598d655e6be9",
+"position": "41.044389,21.346389",
+"comments": "pulse.eco Wi-Fi sensor v2 at Strelishte",
+"type": "3",
+"description": "Strelishte",
+"status": "ACTIVE"
+},
+{
+"sensorId": "87f82783-853b-417d-8964-b5cf11e44873",
+"position": "41.035567,21.337528",
+"comments": "pulse.eco Wi-Fi v2. sensor at SremskaMitrovica",
+"type": "3",
+"description": "SremskaMitrovica",
+"status": "ACTIVE"
+},
+{
+"sensorId": "a17013e7-8d1d-4b0d-8e2f-e0881dbca3ac",
+"position": "41.015139,21.344139",
+"comments": "pulse.eco Wi-Fi sensor v2 near Zooloshka",
+"type": "3",
+"description": "Zooloshka",
+"status": "ACTIVE"
+},
+{
+"sensorId": "2001",
+"position": "41.039867,21.356340",
+"comments": "",
+"type": "0",
+"description": "MOEPP Bitola 1",
+"status": "ACTIVE"
+},
+{
+"sensorId": "2002",
+"position": "41.030221,21.336733",
+"comments": "",
+"type": "0",
+"description": "MOEPP Bitola 2",
+"status": "ACTIVE"
+},
+{
+"sensorId": "24039f11-a4fc-4b2d-8bc0-6fd36059f117",
+"position": "41.03216365895225,21.311136691028267",
+"comments": "pulse.eco WiFi v2 sensor located at Smilevski Kongres street",
+"type": "3",
+"description": "Smilevski Kongres",
+"status": "NOT_CLAIMED"
+},
+{
+"sensorId": "692c454c-a1ad-41fa-b3ca-aa1cb7d55d30",
+"position": "41.026167,21.308917",
+"comments": "pulse.eco Wi-Fi sensor v2 near Todor Panica st.",
+"type": "3",
+"description": "Todor Panica",
+"status": "ACTIVE"
+}
+]

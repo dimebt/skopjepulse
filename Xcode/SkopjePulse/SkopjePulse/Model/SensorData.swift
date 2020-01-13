@@ -11,7 +11,7 @@ import Foundation
 // MARK: - SensorData Model
 struct SensorValue: Codable {
     let sensorId: String
-    let stamp: String
+    let stamp: Date
     let type: TypeEnum
     let position: String
     let value: String

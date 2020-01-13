@@ -7,32 +7,98 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Cities View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="SkopjePulse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CitiesViewController" id="BYZ-38-t0r" customClass="CitiesViewController" customModule="SkopjePulse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SkopjePulse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpb-XX-AwM">
-                                <rect key="frame" x="160" y="437.5" width="94" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WDB-eL-yzT">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ZKw-ev-pWn"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lBC-CL-1jA">
+                                <rect key="frame" x="0.0" y="100" width="414" height="796"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cityCell" rowHeight="50" id="p5v-3T-M42">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="p5v-3T-M42" id="024-Yg-dQu">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="MHA-ja-jW8"/>
+                                </connections>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="qpb-XX-AwM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5ZZ-3X-HVR"/>
-                            <constraint firstItem="qpb-XX-AwM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wu4-Lc-54U"/>
+                            <constraint firstItem="WDB-eL-yzT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4pc-J6-2v8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WDB-eL-yzT" secondAttribute="trailing" id="57K-Q2-qKT"/>
+                            <constraint firstItem="WDB-eL-yzT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="C0G-Yn-mRa"/>
+                            <constraint firstItem="lBC-CL-1jA" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="Fxa-x4-C4x"/>
+                            <constraint firstItem="lBC-CL-1jA" firstAttribute="top" secondItem="WDB-eL-yzT" secondAttribute="bottom" id="WFi-qb-uJH"/>
+                            <constraint firstItem="lBC-CL-1jA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kum-o8-L2J"/>
+                            <constraint firstItem="lBC-CL-1jA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qLP-2g-aJQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="cityTableView" destination="lBC-CL-1jA" id="heE-dU-iTo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="139"/>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+        <!--Sensors View Controller-->
+        <scene sceneID="P7q-DO-mAJ">
+            <objects>
+                <viewController storyboardIdentifier="SensorsViewController" id="Uk6-UB-4ID" customClass="SensorsViewController" customModule="SkopjePulse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EUf-JH-Cmg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OMa-na-g6R">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sensorCell" rowHeight="94" id="Zex-0X-bod" customClass="SensorTableViewCell" customModule="SkopjePulse" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="94"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zex-0X-bod" id="JQO-Wl-RhS">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="OMa-na-g6R" secondAttribute="bottom" id="It9-cv-2m7"/>
+                            <constraint firstItem="tX7-04-car" firstAttribute="trailing" secondItem="OMa-na-g6R" secondAttribute="trailing" id="LCv-wB-5pJ"/>
+                            <constraint firstItem="OMa-na-g6R" firstAttribute="top" secondItem="tX7-04-car" secondAttribute="top" id="Ruh-eS-iat"/>
+                            <constraint firstItem="OMa-na-g6R" firstAttribute="leading" secondItem="tX7-04-car" secondAttribute="leading" id="nnI-gI-rRy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tX7-04-car"/>
+                    </view>
+                    <connections>
+                        <outlet property="sensorsTableView" destination="OMa-na-g6R" id="tpt-2w-6s7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ulS-Cr-D5g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892.75362318840587" y="138.61607142857142"/>
         </scene>
     </scenes>
 </document>

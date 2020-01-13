@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Light.ttf">
+            <string>Lato-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CityTableViewCell" customModule="SkopjePulse" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="339" height="82"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.76000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bitola" translatesAutoresizingMaskIntoConstraints="NO" id="GRy-rl-95v" userLabel="Background Image">
+                    <rect key="frame" x="0.0" y="0.0" width="339" height="82"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tQa-Zr-08a" userLabel="Background Gradient View" customClass="GradientView" customModule="SkopjePulse" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="339" height="82"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                            <color key="value" red="1" green="1" blue="1" alpha="0.1307523544520548" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                            <color key="value" red="0.019607843137254902" green="0.098039215686274508" blue="0.22745098039215686" alpha="0.96572666952054798" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitola" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXH-Sc-o7k">
+                    <rect key="frame" x="20" y="29" width="83" height="40"/>
+                    <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="33"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="tQa-Zr-08a" firstAttribute="trailing" secondItem="GRy-rl-95v" secondAttribute="trailing" id="16M-9N-JH4"/>
+                <constraint firstItem="tQa-Zr-08a" firstAttribute="bottom" secondItem="GRy-rl-95v" secondAttribute="bottom" id="1uF-1h-Nt7"/>
+                <constraint firstItem="XXH-Sc-o7k" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="1.2" id="3f1-QK-9y3"/>
+                <constraint firstItem="GRy-rl-95v" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4rc-El-aVy"/>
+                <constraint firstItem="tQa-Zr-08a" firstAttribute="leading" secondItem="GRy-rl-95v" secondAttribute="leading" id="Nkw-vn-aRG"/>
+                <constraint firstItem="GRy-rl-95v" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="WDb-9J-Vcp"/>
+                <constraint firstAttribute="trailing" secondItem="GRy-rl-95v" secondAttribute="trailing" id="dkV-GA-9sz"/>
+                <constraint firstAttribute="bottom" secondItem="GRy-rl-95v" secondAttribute="bottom" id="euF-rX-iUb"/>
+                <constraint firstItem="tQa-Zr-08a" firstAttribute="top" secondItem="GRy-rl-95v" secondAttribute="top" id="gbe-6G-dVa"/>
+                <constraint firstItem="XXH-Sc-o7k" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="p98-hK-gt1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cityImage" destination="GRy-rl-95v" id="gMP-TA-wo3"/>
+                <outlet property="cityLabel" destination="XXH-Sc-o7k" id="tSY-ye-o1z"/>
+            </connections>
+            <point key="canvasLocation" x="-431.15942028985512" y="-213.61607142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Bitola" width="900" height="596"/>
+    </resources>
+</document>

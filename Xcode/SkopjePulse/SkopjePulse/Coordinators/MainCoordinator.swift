@@ -11,14 +11,24 @@ import UIKit
 class MainCoordinator: Coordinator {
     var children = [Coordinator]()
     var navigationController: UINavigationController
-
+    
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
-
+    
     func start() {
-         let mainController = ViewController.instantiate()
-         mainController.coordinator = self
-         navigationController.pushViewController(mainController, animated: false)
+        let presenter = CitiesPresenter()
+        let mainController = CitiesViewController.instantiate()
+        mainController.presenter = presenter
+        mainController.coordinator = self
+        navigationController.pushViewController(mainController, animated: false)
+    }
+    
+    func showSensorsViewController(for city: City) {
+        let presenter = SensorsPresenter(city: city)
+        let sensorsViewController = SensorsViewController.instantiate()
+        sensorsViewController.presenter = presenter
+        sensorsViewController.coordinator = self
+        navigationController.pushViewController(sensorsViewController, animated: false)
     }
 }
