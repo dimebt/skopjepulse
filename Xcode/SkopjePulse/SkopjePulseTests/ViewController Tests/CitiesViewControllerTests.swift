@@ -44,9 +44,16 @@ class CitiesViewControllerTests: XCTestCase {
     }
     
     func testTableView_didSelectRowAt_isCalled() {
+        sut.cityTableView.delegate?.tableView?(sut.cityTableView, didSelectRowAt: IndexPath(row: 0, section: 0))
+        let selectedCity = sut.presenter.dataService.cities[0]
+        XCTAssertNotNil(selectedCity)
+        XCTAssertEqual(selectedCity.name, "Skopje")
+    }
+    
+    func testMockTableView_didSelectRowAt_isCalled() {
         let mockTableView = MockCitiesTableView()
         mockTableView.delegate = sut
-        
+        _ = mockTableView.tableView(mockTableView, didSelectRowAt: IndexPath(row: 0, section: 0))
+        XCTAssertTrue(mockTableView.tableViewdidSelectRowAtIsCalled)
     }
-
 }

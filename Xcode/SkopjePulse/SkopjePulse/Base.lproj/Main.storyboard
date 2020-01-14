@@ -7,11 +7,62 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
         <array key="Lato-Regular.ttf">
             <string>Lato-Regular</string>
         </array>
     </customFonts>
     <scenes>
+        <!--Loading View Controller-->
+        <scene sceneID="Fc8-W6-kCn">
+            <objects>
+                <viewController storyboardIdentifier="LoadingViewController" id="GvV-3x-Mmc" customClass="LoadingViewController" customModule="SkopjePulse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AhW-dw-nCP" customClass="GradientView" customModule="SkopjePulse" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kgy-a4-cz3" customClass="LotieView" customModule="SkopjePulse" customModuleProvider="target">
+                                <rect key="frame" x="72.5" y="313.5" width="269" height="269"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kgy-a4-cz3" secondAttribute="height" multiplier="1:1" id="j6C-J9-Urg"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="repeatAnimation" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationFile" value="927-triangle-loading"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading data..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIb-GG-DAe">
+                                <rect key="frame" x="186" y="626" width="114" height="21"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kgy-a4-cz3" firstAttribute="height" secondItem="AhW-dw-nCP" secondAttribute="height" multiplier="0.26" id="299-1Y-evY"/>
+                            <constraint firstItem="YIb-GG-DAe" firstAttribute="top" secondItem="kgy-a4-cz3" secondAttribute="bottom" constant="43.5" id="IOi-b6-rmm"/>
+                            <constraint firstItem="kgy-a4-cz3" firstAttribute="centerY" secondItem="AhW-dw-nCP" secondAttribute="centerY" id="PdB-G3-jMX"/>
+                            <constraint firstItem="kgy-a4-cz3" firstAttribute="centerX" secondItem="AhW-dw-nCP" secondAttribute="centerX" id="X76-v9-DJx"/>
+                            <constraint firstItem="YIb-GG-DAe" firstAttribute="centerX" secondItem="kgy-a4-cz3" secondAttribute="centerX" id="YN0-qs-c9Z"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                <color key="value" red="0.074509803921568626" green="0.062745098039215685" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                <color key="value" red="0.21568627450980393" green="0.20784313725490194" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q1d-Qd-UQU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-720.28985507246387" y="138.61607142857142"/>
+        </scene>
         <!--Cities View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -74,14 +125,14 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="WDB-eL-yzT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4pc-J6-2v8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WDB-eL-yzT" secondAttribute="trailing" id="57K-Q2-qKT"/>
-                            <constraint firstItem="WDB-eL-yzT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="C0G-Yn-mRa"/>
+                            <constraint firstItem="SJL-K7-DHF" firstAttribute="trailing" secondItem="WDB-eL-yzT" secondAttribute="trailing" id="57K-Q2-qKT"/>
+                            <constraint firstItem="WDB-eL-yzT" firstAttribute="leading" secondItem="SJL-K7-DHF" secondAttribute="leading" id="C0G-Yn-mRa"/>
                             <constraint firstItem="lBC-CL-1jA" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="Fxa-x4-C4x"/>
                             <constraint firstItem="lBC-CL-1jA" firstAttribute="top" secondItem="WDB-eL-yzT" secondAttribute="bottom" id="WFi-qb-uJH"/>
-                            <constraint firstItem="lBC-CL-1jA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kum-o8-L2J"/>
-                            <constraint firstItem="lBC-CL-1jA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qLP-2g-aJQ"/>
+                            <constraint firstItem="lBC-CL-1jA" firstAttribute="leading" secondItem="SJL-K7-DHF" secondAttribute="leading" id="kum-o8-L2J"/>
+                            <constraint firstItem="lBC-CL-1jA" firstAttribute="trailing" secondItem="SJL-K7-DHF" secondAttribute="trailing" id="qLP-2g-aJQ"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="SJL-K7-DHF"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="topColor">
                                 <color key="value" red="0.074509803921568626" green="0.062745098039215685" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
@@ -163,15 +214,15 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="TmX-RH-NCG" firstAttribute="leading" secondItem="tX7-04-car" secondAttribute="leading" id="5gH-5M-wLS"/>
-                            <constraint firstItem="TmX-RH-NCG" firstAttribute="trailing" secondItem="tX7-04-car" secondAttribute="trailing" id="9aa-pn-K2O"/>
+                            <constraint firstItem="TmX-RH-NCG" firstAttribute="leading" secondItem="1H1-NR-DBq" secondAttribute="leading" id="5gH-5M-wLS"/>
+                            <constraint firstItem="TmX-RH-NCG" firstAttribute="trailing" secondItem="1H1-NR-DBq" secondAttribute="trailing" id="9aa-pn-K2O"/>
                             <constraint firstAttribute="bottom" secondItem="OMa-na-g6R" secondAttribute="bottom" id="It9-cv-2m7"/>
-                            <constraint firstItem="tX7-04-car" firstAttribute="trailing" secondItem="OMa-na-g6R" secondAttribute="trailing" id="LCv-wB-5pJ"/>
+                            <constraint firstItem="1H1-NR-DBq" firstAttribute="trailing" secondItem="OMa-na-g6R" secondAttribute="trailing" id="LCv-wB-5pJ"/>
                             <constraint firstItem="TmX-RH-NCG" firstAttribute="top" secondItem="EUf-JH-Cmg" secondAttribute="top" id="Mwy-Ib-iK1"/>
                             <constraint firstItem="OMa-na-g6R" firstAttribute="top" secondItem="TmX-RH-NCG" secondAttribute="bottom" id="Ruh-eS-iat"/>
-                            <constraint firstItem="OMa-na-g6R" firstAttribute="leading" secondItem="tX7-04-car" secondAttribute="leading" id="nnI-gI-rRy"/>
+                            <constraint firstItem="OMa-na-g6R" firstAttribute="leading" secondItem="1H1-NR-DBq" secondAttribute="leading" id="nnI-gI-rRy"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="tX7-04-car"/>
+                        <viewLayoutGuide key="safeArea" id="1H1-NR-DBq"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="topColor">
                                 <color key="value" red="0.074509803921568626" green="0.062745098039215685" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>

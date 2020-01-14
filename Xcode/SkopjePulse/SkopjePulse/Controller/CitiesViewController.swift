@@ -17,6 +17,8 @@ class CitiesViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        showLoader()
+        
         configureCityTableView()
         
 //        let sensorsEndpointBitola = EndpointFactory.create(for: PulseEco.bitola, endpoint: .Sensors)!

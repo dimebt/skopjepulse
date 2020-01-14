@@ -106,6 +106,23 @@ class CitiesDataServiceTests: XCTestCase {
         XCTAssertTrue(mockTableView.dequeueReusableCellisCalled)
     }
     
+    func testTableViewCell_on_configure_ShoudSetCellData() {
+        let city1 = City(name: "Prilep")
+        let citiesStub = [city1]
+        sut = CitiesDataService(cities: citiesStub)
+        let tableView = UITableView()
+        let cityCell = UINib(nibName: "CityCell", bundle: nil)
+        tableView.register(cityCell, forCellReuseIdentifier: sut.cellIdentifier)
+        tableView.dataSource = sut
+        tableView.reloadData()
+        
+        let cell = tableView.cellForRow(at: IndexPath(item: 0, section: 0)) as! CityTableViewCell
+        let cityLabelText = cell.cityLabel.text
+        XCTAssertNotNil(cityLabelText)
+        XCTAssertEqual(cityLabelText, city1.name)
+        XCTAssertEqual(cell.cityImage.image, UIImage(named: city1.name))
+    }
+    
     
     
     
