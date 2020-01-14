@@ -17,7 +17,7 @@ class CitiesViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        showLoader()
+        //showLoader()
         
         configureCityTableView()
         
@@ -49,5 +49,6 @@ extension CitiesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let city = presenter.dataService.cities[indexPath.row]
         coordinator?.showSensorsViewController(for: city)
+        print("Selected \(city.name)")
     }
 }

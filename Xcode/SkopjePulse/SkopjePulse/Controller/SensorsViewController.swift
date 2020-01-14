@@ -34,6 +34,11 @@ class SensorsViewController: UIViewController, Storyboarded {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+    }
+    
     private func configureSensorTableView() {
         sensorsTableView.dataSource = presenter
         let sensorCell = UINib(nibName: "SensorCell", bundle: nil)
@@ -44,6 +49,6 @@ class SensorsViewController: UIViewController, Storyboarded {
 
 extension SensorsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 50
     }
 }

@@ -31,9 +31,3 @@ class CitiesDataService: NSObject, UITableViewDataSource {
         return cell
     }
 }
-
-
-
-extension CitiesDataService: UITableViewDelegate {
-    
-}

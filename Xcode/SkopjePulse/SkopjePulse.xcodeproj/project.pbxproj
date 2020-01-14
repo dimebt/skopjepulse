@@ -42,9 +42,7 @@
 		4652A30523CCD93B0046BBA7 /* SensorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4652A30423CCD93B0046BBA7 /* SensorTableViewCell.swift */; };
 		4652A30723CCDDD60046BBA7 /* SensorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4652A30623CCDDD60046BBA7 /* SensorCell.xib */; };
 		4652A30C23CCEC230046BBA7 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4652A30923CCEC230046BBA7 /* LoadingViewController.swift */; };
-		4652A30D23CCEC230046BBA7 /* Lottie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4652A30B23CCEC230046BBA7 /* Lottie.swift */; };
 		4652A31023CCEC670046BBA7 /* 927-triangle-loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 4652A30E23CCEC670046BBA7 /* 927-triangle-loading.json */; };
-		4652A31123CCEC670046BBA7 /* 874-pulse-loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 4652A30F23CCEC670046BBA7 /* 874-pulse-loader.json */; };
 		466BCA4523CC798F0003F469 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466BCA4423CC798F0003F469 /* Date.swift */; };
 		466BCA4723CC79960003F469 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466BCA4623CC79960003F469 /* String.swift */; };
 		466BCA4A23CC79F40003F469 /* DateBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466BCA4923CC79F40003F469 /* DateBuilder.swift */; };
@@ -114,9 +112,7 @@
 		4652A30423CCD93B0046BBA7 /* SensorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorTableViewCell.swift; sourceTree = "<group>"; };
 		4652A30623CCDDD60046BBA7 /* SensorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SensorCell.xib; sourceTree = "<group>"; };
 		4652A30923CCEC230046BBA7 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
-		4652A30B23CCEC230046BBA7 /* Lottie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lottie.swift; sourceTree = "<group>"; };
 		4652A30E23CCEC670046BBA7 /* 927-triangle-loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "927-triangle-loading.json"; path = "../../../../../Assets/Lottie/927-triangle-loading.json"; sourceTree = "<group>"; };
-		4652A30F23CCEC670046BBA7 /* 874-pulse-loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "874-pulse-loader.json"; path = "../../../../../Assets/Lottie/874-pulse-loader.json"; sourceTree = "<group>"; };
 		466BCA4423CC798F0003F469 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		466BCA4623CC79960003F469 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		466BCA4923CC79F40003F469 /* DateBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateBuilder.swift; sourceTree = "<group>"; };
@@ -337,7 +333,6 @@
 			isa = PBXGroup;
 			children = (
 				4652A30823CCEC230046BBA7 /* Loading controller */,
-				4652A30A23CCEC230046BBA7 /* Lottie */,
 				462ADAC823CC8E3000812D06 /* UIView */,
 			);
 			path = "Reusable Components";
@@ -374,19 +369,9 @@
 			path = "../../../../../../../Teltonika SMS Commands/Source/Teltonika Xcode Project/Teltonika-GPRPS-SMS-Commands/SMS Commands/SMS Commands/Reusable components/Loading controller";
 			sourceTree = "<group>";
 		};
-		4652A30A23CCEC230046BBA7 /* Lottie */ = {
-			isa = PBXGroup;
-			children = (
-				4652A30B23CCEC230046BBA7 /* Lottie.swift */,
-			);
-			name = Lottie;
-			path = "../../../../../../../Teltonika SMS Commands/Source/Teltonika Xcode Project/Teltonika-GPRPS-SMS-Commands/SMS Commands/SMS Commands/Reusable components/Lottie";
-			sourceTree = "<group>";
-		};
 		4652A31223CCEC690046BBA7 /* Lottie Files */ = {
 			isa = PBXGroup;
 			children = (
-				4652A30F23CCEC670046BBA7 /* 874-pulse-loader.json */,
 				4652A30E23CCEC670046BBA7 /* 927-triangle-loading.json */,
 			);
 			path = "Lottie Files";
@@ -556,7 +541,6 @@
 				462ADAC123CC8C3500812D06 /* Lato-Black.ttf in Resources */,
 				462ADAC623CC8C3500812D06 /* Lato-Thin.ttf in Resources */,
 				462ADAC223CC8C3500812D06 /* Lato-LightItalic.ttf in Resources */,
-				4652A31123CCEC670046BBA7 /* 874-pulse-loader.json in Resources */,
 				462ADABF23CC8C3500812D06 /* Lato-BlackItalic.ttf in Resources */,
 				462ADABE23CC8C3500812D06 /* Lato-ThinItalic.ttf in Resources */,
 				462ADAC423CC8C3500812D06 /* Lato-Regular.ttf in Resources */,
@@ -657,7 +641,6 @@
 				4615EE1D23CB1CC900595F77 /* AppDelegate.swift in Sources */,
 				46AB756523CC9EB80003097F /* SensorsPresenter.swift in Sources */,
 				4615EE5323CB455D00595F77 /* Sensor.swift in Sources */,
-				4652A30D23CCEC230046BBA7 /* Lottie.swift in Sources */,
 				46AB756323CC968D0003097F /* CitiesPresenter.swift in Sources */,
 				462ADACA23CC8E4000812D06 /* GradientView.swift in Sources */,
 				46A09C8423CC889500BDFD4C /* LocalJsonFetcher.swift in Sources */,
