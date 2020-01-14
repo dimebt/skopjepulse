@@ -13,20 +13,18 @@ class CitiesViewController: UIViewController, Storyboarded {
     public var presenter: CitiesPresenter!
     weak var coordinator: MainCoordinator?
     @IBOutlet weak var cityTableView: UITableView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureCityTableView()
         
-        
-        
-        let sensorsEndpointBitola = EndpointFactory.create(for: PulseEco.bitola, endpoint: .Sensors)!
-        //let sensorData24h = EndpointFactory.create(for: .Skopje, endpoint: .Data24h)!
-        let fetcher = NetworkFetcher<Sensors>()
-        fetcher.fetch(from: sensorsEndpointBitola) { result in
-            print(result)
-        }
+//        let sensorsEndpointBitola = EndpointFactory.create(for: PulseEco.bitola, endpoint: .Sensors)!
+//        let sensorData24h = EndpointFactory.create(for: .Skopje, endpoint: .Data24h)!
+//        let fetcher = NetworkFetcher<Sensors>()
+//        fetcher.fetch(from: sensorsEndpointBitola) { result in
+//            print(result)
+//        }
 //        LocalJsonFetcher<Sensors>().fetch(from: URL(string: "restSensorsBitola")!) { (result) in
 //            print(result)
 //        }
@@ -34,9 +32,10 @@ class CitiesViewController: UIViewController, Storyboarded {
     }
     
     private func configureCityTableView() {
-        cityTableView.dataSource = presenter
+        cityTableView.dataSource = presenter.dataService
+        cityTableView.delegate = self
         let cityCell = UINib(nibName: "CityCell", bundle: nil)
-        cityTableView.register(cityCell, forCellReuseIdentifier: presenter.cellIdentifier)
+        cityTableView.register(cityCell, forCellReuseIdentifier: presenter.dataService.cellIdentifier)
         cityTableView.delaysContentTouches = false
     }
 }
@@ -46,7 +45,7 @@ extension CitiesViewController: UITableViewDelegate {
         return 120
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let city = presenter.cities[indexPath.row]
+        let city = presenter.dataService.cities[indexPath.row]
         coordinator?.showSensorsViewController(for: city)
     }
 }

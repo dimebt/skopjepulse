@@ -17,10 +17,10 @@ class MainCoordinator: Coordinator {
     }
     
     func start() {
-        let presenter = CitiesPresenter()
         let mainController = CitiesViewController.instantiate()
-        mainController.presenter = presenter
+        let presenter = CitiesPresenter()
         mainController.coordinator = self
+        mainController.presenter = presenter
         navigationController.pushViewController(mainController, animated: false)
     }
     
