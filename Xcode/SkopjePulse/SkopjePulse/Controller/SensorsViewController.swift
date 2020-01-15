@@ -21,7 +21,6 @@ class SensorsViewController: UIViewController, Storyboarded {
         navigationController?.popViewController(animated: true)
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSensorTableView()
@@ -64,8 +63,7 @@ extension SensorsViewController: UITableViewDataSource {
     }
 }
 
-extension SensorsViewController: SensorsView {
-    
+extension SensorsViewController: SensorsPresenterDelegate {    
     func startLoading() {
         showLoader()
     }
@@ -84,9 +82,9 @@ extension SensorsViewController: SensorsView {
     func errorFetching(error: Error) {
     }
     
-    func showSensorDetails(sensor: Sensor) {
-        coordinator?.showAverageDataViewController(for: sensor)
-        print("Show sensor details for \(sensor)")
+    func showSensorDetails(city: City, sensor: Sensor) {
+        coordinator?.showAverageDataViewController(for: city, sensor: sensor)
+        print("Show sensor details for \(city.name) \(sensor)")
     }
 }
 

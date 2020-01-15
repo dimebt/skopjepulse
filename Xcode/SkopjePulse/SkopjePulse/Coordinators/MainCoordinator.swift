@@ -32,8 +32,8 @@ class MainCoordinator: Coordinator {
         navigationController.pushViewController(sensorsViewController, animated: false)
     }
     
-    func showAverageDataViewController(for sensor: Sensor) {
-        let presenter = AverageDataPresenter(sensor: sensor)
+    func showAverageDataViewController(for city: City, sensor: Sensor) {
+        let presenter = AverageDataPresenter(city: city, sensor: sensor)
         let averageDataViewController = AverageDataViewController.instantiate()
         averageDataViewController.presenter = presenter
         averageDataViewController.coordinator = self

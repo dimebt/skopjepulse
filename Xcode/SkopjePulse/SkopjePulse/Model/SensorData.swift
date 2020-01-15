@@ -12,7 +12,7 @@ import Foundation
 struct SensorValue: Codable {
     let sensorId: String
     let stamp: Date
-    let type: TypeEnum
+    let type: SensorTypeEnum
     let position: String
     let value: String
 
@@ -21,7 +21,7 @@ struct SensorValue: Codable {
     }
 }
 
-enum TypeEnum: String, Codable {
+enum SensorTypeEnum: String, Codable {
     case humidity = "humidity"
     case noise = "noise"
     case pm10 = "pm10"

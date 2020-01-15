@@ -290,7 +290,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0qA-5X-KzT">
-                                <rect key="frame" x="0.0" y="298" width="414" height="598"/>
+                                <rect key="frame" x="0.0" y="278.5" width="414" height="617.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -307,19 +307,13 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sensor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7B-t7-mIy">
-                                <rect key="frame" x="20" y="159.5" width="75.5" height="30"/>
+                                <rect key="frame" x="20" y="149.5" width="75.5" height="30"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 125 μg/m3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73O-xw-1ke">
-                                <rect key="frame" x="135.5" y="160" width="120.5" height="29"/>
-                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="24"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eyF-na-RzS">
-                                <rect key="frame" x="152.5" y="219" width="109" height="32"/>
+                                <rect key="frame" x="152.5" y="199.5" width="109" height="32"/>
                                 <segments>
                                     <segment title="pm10"/>
                                     <segment title="pm25"/>
@@ -340,25 +334,23 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="73O-xw-1ke" firstAttribute="centerY" secondItem="T7B-t7-mIy" secondAttribute="centerY" id="9cb-9T-1rm"/>
+                            <constraint firstItem="dbE-Wc-ZG4" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="T7B-t7-mIy" secondAttribute="trailing" symbolic="YES" id="Ala-Ve-cUd"/>
                             <constraint firstItem="T7B-t7-mIy" firstAttribute="leading" secondItem="c5h-x8-lkR" secondAttribute="leading" id="Aqr-rx-fmx"/>
                             <constraint firstItem="iHE-Mb-6oO" firstAttribute="top" secondItem="iog-AF-KPj" secondAttribute="top" constant="52" id="D5O-HJ-9SQ"/>
                             <constraint firstItem="dbE-Wc-ZG4" firstAttribute="trailing" secondItem="iHE-Mb-6oO" secondAttribute="trailing" constant="40" id="EgX-nv-oKW"/>
                             <constraint firstItem="c5h-x8-lkR" firstAttribute="top" secondItem="iHE-Mb-6oO" secondAttribute="bottom" constant="20" id="FfN-hU-qDe"/>
-                            <constraint firstItem="dbE-Wc-ZG4" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="73O-xw-1ke" secondAttribute="trailing" symbolic="YES" id="Fvn-C7-6Zi"/>
                             <constraint firstItem="eyF-na-RzS" firstAttribute="centerX" secondItem="dbE-Wc-ZG4" secondAttribute="centerX" id="IbN-qm-g7M"/>
-                            <constraint firstItem="eyF-na-RzS" firstAttribute="top" secondItem="73O-xw-1ke" secondAttribute="bottom" constant="30" id="Jql-ZX-6Ys"/>
                             <constraint firstItem="dbE-Wc-ZG4" firstAttribute="trailing" secondItem="7dl-VY-SoH" secondAttribute="trailing" constant="10" id="K8W-fU-3M9"/>
                             <constraint firstItem="iHE-Mb-6oO" firstAttribute="leading" secondItem="dbE-Wc-ZG4" secondAttribute="leading" constant="40" id="ZAS-6C-J3L"/>
                             <constraint firstItem="c5h-x8-lkR" firstAttribute="leading" secondItem="dbE-Wc-ZG4" secondAttribute="leading" constant="20" id="bWV-VJ-uZ9"/>
                             <constraint firstAttribute="bottom" secondItem="0qA-5X-KzT" secondAttribute="bottom" id="dRE-PI-Ov6"/>
                             <constraint firstItem="dbE-Wc-ZG4" firstAttribute="trailing" secondItem="0qA-5X-KzT" secondAttribute="trailing" id="eTq-i3-Zhf"/>
-                            <constraint firstItem="T7B-t7-mIy" firstAttribute="top" secondItem="c5h-x8-lkR" secondAttribute="bottom" constant="30" id="fbF-pz-8ge"/>
+                            <constraint firstItem="T7B-t7-mIy" firstAttribute="top" secondItem="c5h-x8-lkR" secondAttribute="bottom" constant="20" id="fbF-pz-8ge"/>
                             <constraint firstItem="dbE-Wc-ZG4" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="c5h-x8-lkR" secondAttribute="trailing" symbolic="YES" id="feI-U3-rGc"/>
+                            <constraint firstItem="eyF-na-RzS" firstAttribute="top" secondItem="T7B-t7-mIy" secondAttribute="bottom" constant="20" id="mC0-B2-uxg"/>
                             <constraint firstItem="0qA-5X-KzT" firstAttribute="leading" secondItem="dbE-Wc-ZG4" secondAttribute="leading" id="mN6-XY-uXH"/>
                             <constraint firstItem="7dl-VY-SoH" firstAttribute="top" secondItem="dbE-Wc-ZG4" secondAttribute="top" constant="10" id="nN0-9H-012"/>
                             <constraint firstItem="0qA-5X-KzT" firstAttribute="top" secondItem="eyF-na-RzS" secondAttribute="bottom" constant="48" id="s5l-Ul-S5l"/>
-                            <constraint firstItem="73O-xw-1ke" firstAttribute="leading" secondItem="T7B-t7-mIy" secondAttribute="trailing" constant="40" id="vYm-D8-VaD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dbE-Wc-ZG4"/>
                         <userDefinedRuntimeAttributes>
@@ -372,7 +364,6 @@
                     </view>
                     <connections>
                         <outlet property="avgDataTableView" destination="0qA-5X-KzT" id="ccH-DG-mS5"/>
-                        <outlet property="sensorAvgData24h" destination="73O-xw-1ke" id="SMu-nZ-HH3"/>
                         <outlet property="sensorTitle" destination="T7B-t7-mIy" id="d8X-Ra-0r5"/>
                     </connections>
                 </viewController>

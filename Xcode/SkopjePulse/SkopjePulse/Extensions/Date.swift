@@ -9,6 +9,9 @@
 import Foundation
 
 extension Date {
+    public func before(hours: Int) -> Date? {
+        return Calendar.current.date(byAdding: .hour, value: -hours, to: self)
+    }
     public func convertToString(dateFormat: String) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = dateFormat

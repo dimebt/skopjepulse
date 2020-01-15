@@ -8,35 +8,34 @@
 
 import UIKit
 
-protocol SensorsView: class {
+protocol SensorsPresenterDelegate: class {
     func startLoading()
     func finishLoading(with sensors: Sensors)
     func sensorStateSaved()
-    func showSensorDetails(sensor: Sensor)
+    func showSensorDetails(city: City, sensor: Sensor)
     func errorFetching(error: Error)
 }
 
 class SensorsPresenter: NSObject {
     
-    weak var delegate: SensorsView?
-    
+    weak var delegate: SensorsPresenterDelegate?
     private var city: City!
     private var fetchService: NetworkFetcher<Sensors>!
-    private var apiEndpoint: URL!
+    private var endpoint: URL!
     private var sensorState = [String: SensorState]()
     
     public var cellIdentifier = "sensorCell"
     
-    init(fetchService: NetworkFetcher<Sensors> = NetworkFetcher<Sensors>(),         
-         city: City) {
+    init(city: City,
+         fetchService: NetworkFetcher<Sensors> = NetworkFetcher<Sensors>()) {
         self.fetchService = fetchService
         self.city = city
-        self.apiEndpoint = EndpointFactory.create(for: city, endpoint: .Sensors)
+        self.endpoint = EndpointFactory.create(for: city, endpoint: .Sensors)
     }
     
     public func fetchSensors() {
         delegate?.startLoading()
-        fetchService.fetch(from: apiEndpoint) { (result) in
+        fetchService.fetch(from: endpoint) { (result) in
             switch result {
             case .success(let sensors):
                 self.delegate?.finishLoading(with: sensors)
@@ -62,7 +61,7 @@ class SensorsPresenter: NSObject {
     
     public func tapOnSensor(sensor: Sensor) {
         if !sensorDisabled(sensor: sensor) {
-            delegate?.showSensorDetails(sensor: sensor)
+            delegate?.showSensorDetails(city: self.city, sensor: sensor)
         }
     }
     

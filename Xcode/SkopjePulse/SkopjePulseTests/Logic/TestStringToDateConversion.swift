@@ -37,7 +37,7 @@ class TestStringToDateConversion: XCTestCase {
             .getTimeInterval()
         
         XCTAssertNotNil(sut)
-        XCTAssertEqual(sut!, stub, accuracy: 0.001)
+        XCTAssertEqual(sut!, stub, accuracy: 0.002)
     }
     
     func testGivenStringDateConversionToDate_2() {
@@ -54,7 +54,7 @@ class TestStringToDateConversion: XCTestCase {
             .getTimeInterval()
         
         XCTAssertNotNil(sut)
-        XCTAssertEqual(sut!, stub, accuracy: 0.001)
+        XCTAssertEqual(sut!, stub, accuracy: 0.002)
     }
     
 

@@ -15,19 +15,20 @@ class AverageDataViewController: UIViewController, Storyboarded {
     @IBOutlet weak var avgDataTableView: UITableView!
     @IBOutlet weak var sensorTitle: UILabel!
     @IBOutlet weak var sensorAvgData24h: UILabel!
+    
+    // MARK: - Private properties
+    private var averageData: [AverageData]!
 
     @IBAction func dismiss(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        sensorTitle.text = presenter.getSensorTitle()
-        
         configureAvgDataTableView()
+        sensorTitle.text = presenter.getSensorTitle()
+        presenter.delegate = self
+        presenter.fetchSensorData()
     }
     
     private func configureAvgDataTableView() {
@@ -46,6 +47,8 @@ extension AverageDataViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: presenter.cellIdentifier, for: indexPath) as! AverageDataTableViewCell
+        guard self.averageData != nil else { return cell }
+        cell.configure(with: averageData[indexPath.row])
         return cell
     }
 }
@@ -53,5 +56,16 @@ extension AverageDataViewController: UITableViewDataSource {
 extension AverageDataViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
+    }
+}
+
+extension AverageDataViewController: AverageDataPresenterDelegate {
+    func loading() {
+        showLoader()
+    }
+    func finishedLoading(averageData: [AverageData]) {
+        self.averageData = averageData
+        self.avgDataTableView.reloadData()
+        hideLoader()
     }
 }

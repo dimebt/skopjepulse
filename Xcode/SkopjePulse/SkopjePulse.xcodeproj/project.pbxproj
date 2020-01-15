@@ -36,7 +36,9 @@
 		462ADAC523CC8C3500812D06 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 462ADABB23CC8C3400812D06 /* Lato-Light.ttf */; };
 		462ADAC623CC8C3500812D06 /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 462ADABC23CC8C3500812D06 /* Lato-Thin.ttf */; };
 		462ADACA23CC8E4000812D06 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462ADAC923CC8E4000812D06 /* GradientView.swift */; };
-		46384BDF23CEF0100041AD91 /* SensorDataGlobalCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46384BDE23CEF0100041AD91 /* SensorDataGlobalCache.swift */; };
+		46384BE323CF119E0041AD91 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46384BE223CF119E0041AD91 /* Array.swift */; };
+		46384BE623CF12210041AD91 /* AverageArrayExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46384BE523CF12210041AD91 /* AverageArrayExtensionTests.swift */; };
+		46384BE823CF26770041AD91 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46384BE723CF26770041AD91 /* Double.swift */; };
 		4651A9AA23CC828900985EDC /* TestStringToDateConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4651A9A923CC828900985EDC /* TestStringToDateConversion.swift */; };
 		4652A30323CCD85C0046BBA7 /* SensorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4652A30223CCD85C0046BBA7 /* SensorsViewController.swift */; };
 		4652A30523CCD93B0046BBA7 /* SensorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4652A30423CCD93B0046BBA7 /* SensorTableViewCell.swift */; };
@@ -55,8 +57,6 @@
 		46AB756523CC9EB80003097F /* SensorsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB756423CC9EB80003097F /* SensorsPresenter.swift */; };
 		46AB756723CC9EE70003097F /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB756623CC9EE70003097F /* City.swift */; };
 		46AB756923CCAF220003097F /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB756823CCAF220003097F /* DateFormatter.swift */; };
-		46C3D37A23CE663600CF363E /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C3D37923CE663600CF363E /* UserDefaultsService.swift */; };
-		46C3D37C23CE667500CF363E /* SensorStatePersistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C3D37B23CE667500CF363E /* SensorStatePersistable.swift */; };
 		46C3D37F23CE7A6200CF363E /* AverageDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C3D37E23CE7A6200CF363E /* AverageDataViewController.swift */; };
 		46C3D38123CE7C0700CF363E /* AverageDataPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C3D38023CE7C0700CF363E /* AverageDataPresenter.swift */; };
 		46C3D38323CE7CF100CF363E /* AverageDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C3D38223CE7CF100CF363E /* AverageDataTableViewCell.swift */; };
@@ -113,7 +113,9 @@
 		462ADABB23CC8C3400812D06 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Light.ttf"; path = "../../../../../Assets/Fonts/Lato/Lato-Light.ttf"; sourceTree = "<group>"; };
 		462ADABC23CC8C3500812D06 /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Thin.ttf"; path = "../../../../../Assets/Fonts/Lato/Lato-Thin.ttf"; sourceTree = "<group>"; };
 		462ADAC923CC8E4000812D06 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
-		46384BDE23CEF0100041AD91 /* SensorDataGlobalCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDataGlobalCache.swift; sourceTree = "<group>"; };
+		46384BE223CF119E0041AD91 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		46384BE523CF12210041AD91 /* AverageArrayExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AverageArrayExtensionTests.swift; sourceTree = "<group>"; };
+		46384BE723CF26770041AD91 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		4651A99F23CC826600985EDC /* SkopjePulseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkopjePulseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4651A9A323CC826600985EDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4651A9A923CC828900985EDC /* TestStringToDateConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStringToDateConversion.swift; sourceTree = "<group>"; };
@@ -134,8 +136,6 @@
 		46AB756423CC9EB80003097F /* SensorsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorsPresenter.swift; sourceTree = "<group>"; };
 		46AB756623CC9EE70003097F /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		46AB756823CCAF220003097F /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
-		46C3D37923CE663600CF363E /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
-		46C3D37B23CE667500CF363E /* SensorStatePersistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorStatePersistable.swift; sourceTree = "<group>"; };
 		46C3D37E23CE7A6200CF363E /* AverageDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AverageDataViewController.swift; sourceTree = "<group>"; };
 		46C3D38023CE7C0700CF363E /* AverageDataPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AverageDataPresenter.swift; sourceTree = "<group>"; };
 		46C3D38223CE7CF100CF363E /* AverageDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AverageDataTableViewCell.swift; sourceTree = "<group>"; };
@@ -225,7 +225,6 @@
 			children = (
 				462ADAC723CC8E2000812D06 /* Reusable Components */,
 				462ADAB123CC8C0E00812D06 /* Resources */,
-				46A09C8023CC87ED00BDFD4C /* Stubs */,
 				4615EE4B23CB1D8200595F77 /* AppDelegate */,
 				4615EE2223CB1CC900595F77 /* Protocols */,
 				466BCA4323CC79730003F469 /* Extensions */,
@@ -250,7 +249,6 @@
 				4615EE2323CB1CC900595F77 /* Storyboarded.swift */,
 				4615EE2523CB1CC900595F77 /* Coordinator.swift */,
 				467DF71A23CE1C15009FCECE /* SensorStateDelegate.swift */,
-				46C3D37B23CE667500CF363E /* SensorStatePersistable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -371,24 +369,26 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
-		46384BDD23CEEF9B0041AD91 /* Singleton */ = {
+		46384BE423CF11F60041AD91 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
-				46384BDE23CEF0100041AD91 /* SensorDataGlobalCache.swift */,
+				4651A9A923CC828900985EDC /* TestStringToDateConversion.swift */,
+				46384BE523CF12210041AD91 /* AverageArrayExtensionTests.swift */,
 			);
-			path = Singleton;
+			path = Logic;
 			sourceTree = "<group>";
 		};
 		4651A9A023CC826600985EDC /* SkopjePulseTests */ = {
 			isa = PBXGroup;
 			children = (
+				46A09C8023CC87ED00BDFD4C /* Stubs */,
 				46D0A56523CDC6B1009DC2E6 /* Mocks */,
 				46D0A56223CDBB15009DC2E6 /* Data Service Tests */,
 				46D0A55D23CD9FF4009DC2E6 /* Presenter Tests */,
 				46D0A55A23CD9D39009DC2E6 /* Model Tests */,
 				46002D6623CD9317009425AE /* ViewController Tests */,
+				46384BE423CF11F60041AD91 /* Logic */,
 				4651A9A323CC826600985EDC /* Info.plist */,
-				4651A9A923CC828900985EDC /* TestStringToDateConversion.swift */,
 			);
 			path = SkopjePulseTests;
 			sourceTree = "<group>";
@@ -416,6 +416,8 @@
 				466BCA4423CC798F0003F469 /* Date.swift */,
 				466BCA4623CC79960003F469 /* String.swift */,
 				46AB756823CCAF220003097F /* DateFormatter.swift */,
+				46384BE223CF119E0041AD91 /* Array.swift */,
+				46384BE723CF26770041AD91 /* Double.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -423,20 +425,10 @@
 		466BCA4823CC79D70003F469 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				46384BDD23CEEF9B0041AD91 /* Singleton */,
-				467DF72023CE278D009FCECE /* Persisting */,
 				46B859D723CC85E900EB0B45 /* DateBuilder */,
 				4615EE5623CB47D100595F77 /* NetworkClient */,
 			);
 			path = Service;
-			sourceTree = "<group>";
-		};
-		467DF72023CE278D009FCECE /* Persisting */ = {
-			isa = PBXGroup;
-			children = (
-				46C3D37923CE663600CF363E /* UserDefaultsService.swift */,
-			);
-			path = Persisting;
 			sourceTree = "<group>";
 		};
 		46A09C8023CC87ED00BDFD4C /* Stubs */ = {
@@ -685,9 +677,9 @@
 				46D0A56123CDB935009DC2E6 /* CitiesDataService.swift in Sources */,
 				46AB756923CCAF220003097F /* DateFormatter.swift in Sources */,
 				467DF71B23CE1C15009FCECE /* SensorStateDelegate.swift in Sources */,
-				46384BDF23CEF0100041AD91 /* SensorDataGlobalCache.swift in Sources */,
 				4615EE1D23CB1CC900595F77 /* AppDelegate.swift in Sources */,
 				46AB756523CC9EB80003097F /* SensorsPresenter.swift in Sources */,
+				46384BE323CF119E0041AD91 /* Array.swift in Sources */,
 				4615EE5323CB455D00595F77 /* Sensor.swift in Sources */,
 				46AB756323CC968D0003097F /* CitiesPresenter.swift in Sources */,
 				462ADACA23CC8E4000812D06 /* GradientView.swift in Sources */,
@@ -696,15 +688,14 @@
 				46C3D37F23CE7A6200CF363E /* AverageDataViewController.swift in Sources */,
 				4652A30323CCD85C0046BBA7 /* SensorsViewController.swift in Sources */,
 				467DF71923CE1AE0009FCECE /* SensorState.swift in Sources */,
-				46C3D37A23CE663600CF363E /* UserDefaultsService.swift in Sources */,
 				4615EE1F23CB1CC900595F77 /* SceneDelegate.swift in Sources */,
 				4615EE2423CB1CC900595F77 /* Storyboarded.swift in Sources */,
-				46C3D37C23CE667500CF363E /* SensorStatePersistable.swift in Sources */,
 				4615EE5C23CB9A9F00595F77 /* NetworkFetcher.swift in Sources */,
 				46C3D38323CE7CF100CF363E /* AverageDataTableViewCell.swift in Sources */,
 				46AB756723CC9EE70003097F /* City.swift in Sources */,
 				466BCA4A23CC79F40003F469 /* DateBuilder.swift in Sources */,
 				466BCA4523CC798F0003F469 /* Date.swift in Sources */,
+				46384BE823CF26770041AD91 /* Double.swift in Sources */,
 				4615EE5823CB480A00595F77 /* ApiEndpoints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -718,6 +709,7 @@
 				46D0A56723CDC6E0009DC2E6 /* MockCitiesTableView.swift in Sources */,
 				46D0A55F23CDA011009DC2E6 /* CitiesPresenterTests.swift in Sources */,
 				46D0A55C23CD9D59009DC2E6 /* CityStructTests.swift in Sources */,
+				46384BE623CF12210041AD91 /* AverageArrayExtensionTests.swift in Sources */,
 				46002D6823CD9348009425AE /* CitiesViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
