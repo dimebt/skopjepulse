@@ -22,6 +22,7 @@
 		4615EE5523CB46B800595F77 /* SensorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4615EE5423CB46B800595F77 /* SensorData.swift */; };
 		4615EE5823CB480A00595F77 /* ApiEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4615EE5723CB480A00595F77 /* ApiEndpoints.swift */; };
 		4615EE5C23CB9A9F00595F77 /* NetworkFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4615EE5B23CB9A9F00595F77 /* NetworkFetcher.swift */; };
+		46267C7323CF87EE005D076D /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46267C7223CF87EE005D076D /* SearchService.swift */; };
 		462ADAAB23CC8A5C00812D06 /* restSensorsBitola.json in Resources */ = {isa = PBXBuildFile; fileRef = 462ADAAA23CC8A5C00812D06 /* restSensorsBitola.json */; };
 		462ADAAD23CC8BA500812D06 /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462ADAAC23CC8BA500812D06 /* CityTableViewCell.swift */; };
 		462ADAB023CC8BC900812D06 /* CityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 462ADAAF23CC8BC900812D06 /* CityCell.xib */; };
@@ -45,6 +46,7 @@
 		4652A30723CCDDD60046BBA7 /* SensorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4652A30623CCDDD60046BBA7 /* SensorCell.xib */; };
 		4652A30C23CCEC230046BBA7 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4652A30923CCEC230046BBA7 /* LoadingViewController.swift */; };
 		4652A31023CCEC670046BBA7 /* 927-triangle-loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 4652A30E23CCEC670046BBA7 /* 927-triangle-loading.json */; };
+		4655BAEE23CF78E600C388BA /* SearchServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655BAED23CF78E600C388BA /* SearchServiceTests.swift */; };
 		4668ADBB23CEE70000CEFADD /* AverageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4668ADBA23CEE70000CEFADD /* AverageData.swift */; };
 		466BCA4523CC798F0003F469 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466BCA4423CC798F0003F469 /* Date.swift */; };
 		466BCA4723CC79960003F469 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466BCA4623CC79960003F469 /* String.swift */; };
@@ -62,9 +64,7 @@
 		46C3D38323CE7CF100CF363E /* AverageDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C3D38223CE7CF100CF363E /* AverageDataTableViewCell.swift */; };
 		46C3D38523CE7D1300CF363E /* AverageDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46C3D38423CE7D1300CF363E /* AverageDataCell.xib */; };
 		46D0A55C23CD9D59009DC2E6 /* CityStructTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D0A55B23CD9D59009DC2E6 /* CityStructTests.swift */; };
-		46D0A55F23CDA011009DC2E6 /* CitiesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D0A55E23CDA011009DC2E6 /* CitiesPresenterTests.swift */; };
-		46D0A56123CDB935009DC2E6 /* CitiesDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D0A56023CDB935009DC2E6 /* CitiesDataService.swift */; };
-		46D0A56423CDBB32009DC2E6 /* CitiesDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D0A56323CDBB32009DC2E6 /* CitiesDataServiceTests.swift */; };
+		46D0A56423CDBB32009DC2E6 /* CitiesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D0A56323CDBB32009DC2E6 /* CitiesPresenterTests.swift */; };
 		46D0A56723CDC6E0009DC2E6 /* MockCitiesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D0A56623CDC6E0009DC2E6 /* MockCitiesTableView.swift */; };
 		669FB8880F52C92924EE32B8 /* Pods_SkopjePulseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5602DBB8774D2AE109CCEBF /* Pods_SkopjePulseTests.framework */; };
 		CCEEBC04F1653BC63D117AD5 /* Pods_SkopjePulse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 321FE7E83C7BF4536C55E384 /* Pods_SkopjePulse.framework */; };
@@ -99,6 +99,7 @@
 		4615EE5423CB46B800595F77 /* SensorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorData.swift; sourceTree = "<group>"; };
 		4615EE5723CB480A00595F77 /* ApiEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoints.swift; sourceTree = "<group>"; };
 		4615EE5B23CB9A9F00595F77 /* NetworkFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFetcher.swift; sourceTree = "<group>"; };
+		46267C7223CF87EE005D076D /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 		462ADAAA23CC8A5C00812D06 /* restSensorsBitola.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = restSensorsBitola.json; sourceTree = "<group>"; };
 		462ADAAC23CC8BA500812D06 /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
 		462ADAAF23CC8BC900812D06 /* CityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityCell.xib; sourceTree = "<group>"; };
@@ -124,6 +125,7 @@
 		4652A30623CCDDD60046BBA7 /* SensorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SensorCell.xib; sourceTree = "<group>"; };
 		4652A30923CCEC230046BBA7 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		4652A30E23CCEC670046BBA7 /* 927-triangle-loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "927-triangle-loading.json"; path = "../../../../../Assets/Lottie/927-triangle-loading.json"; sourceTree = "<group>"; };
+		4655BAED23CF78E600C388BA /* SearchServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchServiceTests.swift; sourceTree = "<group>"; };
 		4668ADBA23CEE70000CEFADD /* AverageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AverageData.swift; sourceTree = "<group>"; };
 		466BCA4423CC798F0003F469 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		466BCA4623CC79960003F469 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -141,9 +143,7 @@
 		46C3D38223CE7CF100CF363E /* AverageDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AverageDataTableViewCell.swift; sourceTree = "<group>"; };
 		46C3D38423CE7D1300CF363E /* AverageDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AverageDataCell.xib; sourceTree = "<group>"; };
 		46D0A55B23CD9D59009DC2E6 /* CityStructTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityStructTests.swift; sourceTree = "<group>"; };
-		46D0A55E23CDA011009DC2E6 /* CitiesPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesPresenterTests.swift; sourceTree = "<group>"; };
-		46D0A56023CDB935009DC2E6 /* CitiesDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesDataService.swift; sourceTree = "<group>"; };
-		46D0A56323CDBB32009DC2E6 /* CitiesDataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesDataServiceTests.swift; sourceTree = "<group>"; };
+		46D0A56323CDBB32009DC2E6 /* CitiesPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesPresenterTests.swift; sourceTree = "<group>"; };
 		46D0A56623CDC6E0009DC2E6 /* MockCitiesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCitiesTableView.swift; sourceTree = "<group>"; };
 		537D6AAE833E68A8CECF242C /* Pods-SkopjePulse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkopjePulse.release.xcconfig"; path = "Target Support Files/Pods-SkopjePulse/Pods-SkopjePulse.release.xcconfig"; sourceTree = "<group>"; };
 		566F3F15B52DCBA78412E12C /* Pods-SkopjePulse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkopjePulse.debug.xcconfig"; path = "Target Support Files/Pods-SkopjePulse/Pods-SkopjePulse.debug.xcconfig"; sourceTree = "<group>"; };
@@ -265,7 +265,6 @@
 			isa = PBXGroup;
 			children = (
 				4615EE2023CB1CC900595F77 /* CitiesViewController.swift */,
-				46D0A56023CDB935009DC2E6 /* CitiesDataService.swift */,
 				462ADAAC23CC8BA500812D06 /* CityTableViewCell.swift */,
 				4652A30223CCD85C0046BBA7 /* SensorsViewController.swift */,
 				4652A30423CCD93B0046BBA7 /* SensorTableViewCell.swift */,
@@ -314,6 +313,14 @@
 				46A09C8323CC889500BDFD4C /* LocalJsonFetcher.swift */,
 			);
 			path = NetworkClient;
+			sourceTree = "<group>";
+		};
+		46267C7123CF87DA005D076D /* Search Service */ = {
+			isa = PBXGroup;
+			children = (
+				46267C7223CF87EE005D076D /* SearchService.swift */,
+			);
+			path = "Search Service";
 			sourceTree = "<group>";
 		};
 		462ADAAE23CC8BB000812D06 /* Storyboards */ = {
@@ -374,6 +381,7 @@
 			children = (
 				4651A9A923CC828900985EDC /* TestStringToDateConversion.swift */,
 				46384BE523CF12210041AD91 /* AverageArrayExtensionTests.swift */,
+				4655BAED23CF78E600C388BA /* SearchServiceTests.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -383,7 +391,6 @@
 			children = (
 				46A09C8023CC87ED00BDFD4C /* Stubs */,
 				46D0A56523CDC6B1009DC2E6 /* Mocks */,
-				46D0A56223CDBB15009DC2E6 /* Data Service Tests */,
 				46D0A55D23CD9FF4009DC2E6 /* Presenter Tests */,
 				46D0A55A23CD9D39009DC2E6 /* Model Tests */,
 				46002D6623CD9317009425AE /* ViewController Tests */,
@@ -425,6 +432,7 @@
 		466BCA4823CC79D70003F469 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				46267C7123CF87DA005D076D /* Search Service */,
 				46B859D723CC85E900EB0B45 /* DateBuilder */,
 				4615EE5623CB47D100595F77 /* NetworkClient */,
 			);
@@ -459,17 +467,9 @@
 		46D0A55D23CD9FF4009DC2E6 /* Presenter Tests */ = {
 			isa = PBXGroup;
 			children = (
-				46D0A55E23CDA011009DC2E6 /* CitiesPresenterTests.swift */,
+				46D0A56323CDBB32009DC2E6 /* CitiesPresenterTests.swift */,
 			);
 			path = "Presenter Tests";
-			sourceTree = "<group>";
-		};
-		46D0A56223CDBB15009DC2E6 /* Data Service Tests */ = {
-			isa = PBXGroup;
-			children = (
-				46D0A56323CDBB32009DC2E6 /* CitiesDataServiceTests.swift */,
-			);
-			path = "Data Service Tests";
 			sourceTree = "<group>";
 		};
 		46D0A56523CDC6B1009DC2E6 /* Mocks */ = {
@@ -667,6 +667,7 @@
 				4615EE4E23CB248A00595F77 /* FetchService.swift in Sources */,
 				4668ADBB23CEE70000CEFADD /* AverageData.swift in Sources */,
 				4652A30523CCD93B0046BBA7 /* SensorTableViewCell.swift in Sources */,
+				46267C7323CF87EE005D076D /* SearchService.swift in Sources */,
 				46C3D38123CE7C0700CF363E /* AverageDataPresenter.swift in Sources */,
 				4615EE2123CB1CC900595F77 /* CitiesViewController.swift in Sources */,
 				462ADAAD23CC8BA500812D06 /* CityTableViewCell.swift in Sources */,
@@ -674,7 +675,6 @@
 				4615EE5523CB46B800595F77 /* SensorData.swift in Sources */,
 				466BCA4723CC79960003F469 /* String.swift in Sources */,
 				4652A30C23CCEC230046BBA7 /* LoadingViewController.swift in Sources */,
-				46D0A56123CDB935009DC2E6 /* CitiesDataService.swift in Sources */,
 				46AB756923CCAF220003097F /* DateFormatter.swift in Sources */,
 				467DF71B23CE1C15009FCECE /* SensorStateDelegate.swift in Sources */,
 				4615EE1D23CB1CC900595F77 /* AppDelegate.swift in Sources */,
@@ -705,10 +705,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4651A9AA23CC828900985EDC /* TestStringToDateConversion.swift in Sources */,
-				46D0A56423CDBB32009DC2E6 /* CitiesDataServiceTests.swift in Sources */,
+				46D0A56423CDBB32009DC2E6 /* CitiesPresenterTests.swift in Sources */,
 				46D0A56723CDC6E0009DC2E6 /* MockCitiesTableView.swift in Sources */,
-				46D0A55F23CDA011009DC2E6 /* CitiesPresenterTests.swift in Sources */,
 				46D0A55C23CD9D59009DC2E6 /* CityStructTests.swift in Sources */,
+				4655BAEE23CF78E600C388BA /* SearchServiceTests.swift in Sources */,
 				46384BE623CF12210041AD91 /* AverageArrayExtensionTests.swift in Sources */,
 				46002D6823CD9348009425AE /* CitiesViewControllerTests.swift in Sources */,
 			);

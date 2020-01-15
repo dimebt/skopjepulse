@@ -17,6 +17,7 @@ class CitiesViewController: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.delegate = self        
         configureCityTableView()
     }
     
@@ -25,11 +26,23 @@ class CitiesViewController: UIViewController, Storyboarded {
     }
     
     private func configureCityTableView() {
-        cityTableView.dataSource = presenter.dataService
+        cityTableView.dataSource = self
         cityTableView.delegate = self
         let cityCell = UINib(nibName: "CityCell", bundle: nil)
-        cityTableView.register(cityCell, forCellReuseIdentifier: presenter.dataService.cellIdentifier)
+        cityTableView.register(cityCell, forCellReuseIdentifier: presenter.cellIdentifier)
         cityTableView.delaysContentTouches = false
+    }
+}
+
+extension CitiesViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return presenter.citiesCount
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: presenter.cellIdentifier, for: indexPath) as! CityTableViewCell
+        cell.configure(with: presenter.cities[indexPath.row])
+        return cell
     }
 }
 
@@ -38,9 +51,8 @@ extension CitiesViewController: UITableViewDelegate {
         return 120
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let city = presenter.dataService.cities[indexPath.row]
+        let city = presenter.cities[indexPath.row]
         coordinator?.showSensorsViewController(for: city)
-        print("Selected \(city.name)")
     }
 }
 
@@ -51,5 +63,12 @@ extension CitiesViewController: UISearchBarDelegate {
     }
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
+    }
+}
+
+extension CitiesViewController: CitiesPresenterDelegate {
+    func didFinishQuering() {
+        print("Called search delega")
+        self.cityTableView.reloadData()
     }
 }

@@ -8,8 +8,20 @@
 
 import Foundation
 
-struct City: Hashable {
-    let name: String
+protocol NameRepresentable {
+    var name: String { get }
+}
+
+protocol Lowercased { }
+
+extension Lowercased where Self: NameRepresentable {
+    var lowercased: String {
+        return self.name.lowercased()
+    }
+}
+
+struct City: Hashable, NameRepresentable {
+    var name: String
 }
 
 

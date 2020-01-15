@@ -35,7 +35,7 @@ class CitiesViewControllerTests: XCTestCase {
     
     func testTableViewDataSource_On_viewDidLoad_SetsTableViewDataSource() {
         XCTAssertNotNil(sut.cityTableView.dataSource)
-        XCTAssertTrue(sut.cityTableView.dataSource is CitiesDataService)
+        XCTAssertTrue(sut.cityTableView.dataSource is CitiesViewController)
     }
     
     func testTableViewDelegate_On_viewDidLoad_SetsTableViewDelagate() {
@@ -45,7 +45,7 @@ class CitiesViewControllerTests: XCTestCase {
     
     func testTableView_didSelectRowAt_isCalled() {
         sut.cityTableView.delegate?.tableView?(sut.cityTableView, didSelectRowAt: IndexPath(row: 0, section: 0))
-        let selectedCity = sut.presenter.dataService.cities[0]
+        let selectedCity = sut.presenter.cities[0]
         XCTAssertNotNil(selectedCity)
         XCTAssertEqual(selectedCity.name, "Skopje")
     }
