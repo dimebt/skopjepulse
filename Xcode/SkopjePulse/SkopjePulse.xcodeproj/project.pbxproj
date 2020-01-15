@@ -36,12 +36,14 @@
 		462ADAC523CC8C3500812D06 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 462ADABB23CC8C3400812D06 /* Lato-Light.ttf */; };
 		462ADAC623CC8C3500812D06 /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 462ADABC23CC8C3500812D06 /* Lato-Thin.ttf */; };
 		462ADACA23CC8E4000812D06 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462ADAC923CC8E4000812D06 /* GradientView.swift */; };
+		46384BDF23CEF0100041AD91 /* SensorDataGlobalCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46384BDE23CEF0100041AD91 /* SensorDataGlobalCache.swift */; };
 		4651A9AA23CC828900985EDC /* TestStringToDateConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4651A9A923CC828900985EDC /* TestStringToDateConversion.swift */; };
 		4652A30323CCD85C0046BBA7 /* SensorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4652A30223CCD85C0046BBA7 /* SensorsViewController.swift */; };
 		4652A30523CCD93B0046BBA7 /* SensorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4652A30423CCD93B0046BBA7 /* SensorTableViewCell.swift */; };
 		4652A30723CCDDD60046BBA7 /* SensorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4652A30623CCDDD60046BBA7 /* SensorCell.xib */; };
 		4652A30C23CCEC230046BBA7 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4652A30923CCEC230046BBA7 /* LoadingViewController.swift */; };
 		4652A31023CCEC670046BBA7 /* 927-triangle-loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 4652A30E23CCEC670046BBA7 /* 927-triangle-loading.json */; };
+		4668ADBB23CEE70000CEFADD /* AverageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4668ADBA23CEE70000CEFADD /* AverageData.swift */; };
 		466BCA4523CC798F0003F469 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466BCA4423CC798F0003F469 /* Date.swift */; };
 		466BCA4723CC79960003F469 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466BCA4623CC79960003F469 /* String.swift */; };
 		466BCA4A23CC79F40003F469 /* DateBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466BCA4923CC79F40003F469 /* DateBuilder.swift */; };
@@ -111,6 +113,7 @@
 		462ADABB23CC8C3400812D06 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Light.ttf"; path = "../../../../../Assets/Fonts/Lato/Lato-Light.ttf"; sourceTree = "<group>"; };
 		462ADABC23CC8C3500812D06 /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Thin.ttf"; path = "../../../../../Assets/Fonts/Lato/Lato-Thin.ttf"; sourceTree = "<group>"; };
 		462ADAC923CC8E4000812D06 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		46384BDE23CEF0100041AD91 /* SensorDataGlobalCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDataGlobalCache.swift; sourceTree = "<group>"; };
 		4651A99F23CC826600985EDC /* SkopjePulseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkopjePulseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4651A9A323CC826600985EDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4651A9A923CC828900985EDC /* TestStringToDateConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStringToDateConversion.swift; sourceTree = "<group>"; };
@@ -119,6 +122,7 @@
 		4652A30623CCDDD60046BBA7 /* SensorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SensorCell.xib; sourceTree = "<group>"; };
 		4652A30923CCEC230046BBA7 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		4652A30E23CCEC670046BBA7 /* 927-triangle-loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "927-triangle-loading.json"; path = "../../../../../Assets/Lottie/927-triangle-loading.json"; sourceTree = "<group>"; };
+		4668ADBA23CEE70000CEFADD /* AverageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AverageData.swift; sourceTree = "<group>"; };
 		466BCA4423CC798F0003F469 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		466BCA4623CC79960003F469 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		466BCA4923CC79F40003F469 /* DateBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateBuilder.swift; sourceTree = "<group>"; };
@@ -290,6 +294,7 @@
 				4615EE5423CB46B800595F77 /* SensorData.swift */,
 				46AB756623CC9EE70003097F /* City.swift */,
 				467DF71823CE1AE0009FCECE /* SensorState.swift */,
+				4668ADBA23CEE70000CEFADD /* AverageData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -366,6 +371,14 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
+		46384BDD23CEEF9B0041AD91 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				46384BDE23CEF0100041AD91 /* SensorDataGlobalCache.swift */,
+			);
+			path = Singleton;
+			sourceTree = "<group>";
+		};
 		4651A9A023CC826600985EDC /* SkopjePulseTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,6 +423,7 @@
 		466BCA4823CC79D70003F469 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				46384BDD23CEEF9B0041AD91 /* Singleton */,
 				467DF72023CE278D009FCECE /* Persisting */,
 				46B859D723CC85E900EB0B45 /* DateBuilder */,
 				4615EE5623CB47D100595F77 /* NetworkClient */,
@@ -659,6 +673,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4615EE4E23CB248A00595F77 /* FetchService.swift in Sources */,
+				4668ADBB23CEE70000CEFADD /* AverageData.swift in Sources */,
 				4652A30523CCD93B0046BBA7 /* SensorTableViewCell.swift in Sources */,
 				46C3D38123CE7C0700CF363E /* AverageDataPresenter.swift in Sources */,
 				4615EE2123CB1CC900595F77 /* CitiesViewController.swift in Sources */,
@@ -670,6 +685,7 @@
 				46D0A56123CDB935009DC2E6 /* CitiesDataService.swift in Sources */,
 				46AB756923CCAF220003097F /* DateFormatter.swift in Sources */,
 				467DF71B23CE1C15009FCECE /* SensorStateDelegate.swift in Sources */,
+				46384BDF23CEF0100041AD91 /* SensorDataGlobalCache.swift in Sources */,
 				4615EE1D23CB1CC900595F77 /* AppDelegate.swift in Sources */,
 				46AB756523CC9EB80003097F /* SensorsPresenter.swift in Sources */,
 				4615EE5323CB455D00595F77 /* Sensor.swift in Sources */,

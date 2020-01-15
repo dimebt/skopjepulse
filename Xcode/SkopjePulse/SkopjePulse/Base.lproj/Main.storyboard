@@ -227,6 +227,19 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IEB-tq-37t">
+                                <rect key="frame" x="366" y="54" width="38" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="dxr-rG-glp"/>
+                                    <constraint firstAttribute="width" constant="38" id="fAM-XB-grU"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="dismiss:" destination="qgA-bD-fo6" eventType="touchUpInside" id="QmV-4C-3al"/>
+                                    <action selector="dismiss:" destination="Uk6-UB-4ID" eventType="touchUpInside" id="Xpi-cg-Cgd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -236,7 +249,9 @@
                             <constraint firstItem="4Ry-gq-3lL" firstAttribute="trailing" secondItem="OMa-na-g6R" secondAttribute="trailing" id="LCv-wB-5pJ"/>
                             <constraint firstItem="TmX-RH-NCG" firstAttribute="top" secondItem="EUf-JH-Cmg" secondAttribute="top" id="Mwy-Ib-iK1"/>
                             <constraint firstItem="OMa-na-g6R" firstAttribute="top" secondItem="TmX-RH-NCG" secondAttribute="bottom" id="Ruh-eS-iat"/>
+                            <constraint firstItem="4Ry-gq-3lL" firstAttribute="trailing" secondItem="IEB-tq-37t" secondAttribute="trailing" constant="10" id="ak1-vf-ifr"/>
                             <constraint firstItem="OMa-na-g6R" firstAttribute="leading" secondItem="4Ry-gq-3lL" secondAttribute="leading" id="nnI-gI-rRy"/>
+                            <constraint firstItem="IEB-tq-37t" firstAttribute="top" secondItem="4Ry-gq-3lL" secondAttribute="top" constant="10" id="o58-yc-F5f"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4Ry-gq-3lL"/>
                         <userDefinedRuntimeAttributes>

@@ -14,7 +14,7 @@ class NetworkFetcher<T: Decodable>: FetchService {
         //guard let url = URL(string: url)  else { return }
         let request = URLRequest(url: url, cachePolicy: URLRequest.CachePolicy.reloadIgnoringLocalCacheData, timeoutInterval: 30.0)
         URLSession.shared.dataTask(with: request) { (data, response, err) in
-            print(response.debugDescription)
+            //print(response.debugDescription)
             if let error = err {
                 completion(.failure(error))
             }

@@ -24,7 +24,7 @@ class MainCoordinator: Coordinator {
         navigationController.pushViewController(mainController, animated: false)
     }
     
-    func showSensorsViewController(for city: City) {
+    func showSensorsViewController(for city: City) {        
         let presenter = SensorsPresenter(city: city)
         let sensorsViewController = SensorsViewController.instantiate()
         sensorsViewController.presenter = presenter

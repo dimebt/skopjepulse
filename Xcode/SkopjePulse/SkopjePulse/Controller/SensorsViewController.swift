@@ -17,11 +17,16 @@ class SensorsViewController: UIViewController, Storyboarded {
     // MARK: - Private properties
     private var sensors: Sensors!
     
+    @IBAction func dismiss(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSensorTableView()
         presenter.delegate = self
-        presenter.fetchSensors()
+        presenter.fetchSensors()        
     }
     
     private func configureSensorTableView() {
