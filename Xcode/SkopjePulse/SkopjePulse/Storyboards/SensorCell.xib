@@ -21,6 +21,10 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3RY-WQ-5Cv" customClass="GradientView" customModule="SkopjePulse" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="356" height="62"/>
                     <subviews>
+                        <view hidden="YES" alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UCH-qO-fPa" userLabel="Gray View">
+                            <rect key="frame" x="0.0" y="0.0" width="356" height="62"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMO-xL-xoF" userLabel="Sensor Title">
                             <rect key="frame" x="30" y="19" width="296" height="24"/>
                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
@@ -33,6 +37,9 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4MJ-lj-Lmy">
                                     <rect key="frame" x="0.0" y="0.0" width="26" height="22"/>
                                     <state key="normal" image="eye.slash" catalog="system"/>
+                                    <connections>
+                                        <action selector="disablePressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="1zb-Oj-Vsv"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yub-xM-Nj7">
                                     <rect key="frame" x="36" y="0.0" width="26" height="22"/>
@@ -43,18 +50,22 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
+                        <constraint firstAttribute="bottom" secondItem="UCH-qO-fPa" secondAttribute="bottom" id="5ZX-Vc-avx"/>
                         <constraint firstItem="zoy-iw-0g9" firstAttribute="centerY" secondItem="3RY-WQ-5Cv" secondAttribute="centerY" id="Gd0-yH-A9b"/>
+                        <constraint firstAttribute="trailing" secondItem="UCH-qO-fPa" secondAttribute="trailing" id="Knx-3D-Sqg"/>
+                        <constraint firstItem="UCH-qO-fPa" firstAttribute="top" secondItem="3RY-WQ-5Cv" secondAttribute="top" id="SIB-LS-SET"/>
                         <constraint firstAttribute="trailing" secondItem="zoy-iw-0g9" secondAttribute="trailing" constant="20" id="VDu-ya-9Vb"/>
                         <constraint firstItem="aMO-xL-xoF" firstAttribute="centerX" secondItem="3RY-WQ-5Cv" secondAttribute="centerX" id="VOP-36-QfL"/>
                         <constraint firstItem="aMO-xL-xoF" firstAttribute="centerY" secondItem="3RY-WQ-5Cv" secondAttribute="centerY" id="b4i-YL-Rug"/>
                         <constraint firstItem="aMO-xL-xoF" firstAttribute="leading" secondItem="3RY-WQ-5Cv" secondAttribute="leading" constant="30" id="fjc-0q-IsR"/>
+                        <constraint firstItem="UCH-qO-fPa" firstAttribute="leading" secondItem="3RY-WQ-5Cv" secondAttribute="leading" id="kmA-cb-1qQ"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="topColor">
-                            <color key="value" red="0.074509803921568626" green="0.062745098039215685" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="value" red="0.11764705882352941" green="0.10980392156862745" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
-                            <color key="value" red="0.082352941176470587" green="0.074509803921568626" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="value" red="0.16470588235294117" green="0.15686274509803921" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
@@ -70,6 +81,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="disableSensor" destination="4MJ-lj-Lmy" id="lBR-U7-fnM"/>
+                <outlet property="grayView" destination="UCH-qO-fPa" id="aEq-x5-dKc"/>
                 <outlet property="sensorActivity" destination="Yub-xM-Nj7" id="sdd-yN-0bE"/>
                 <outlet property="sensorTitle" destination="aMO-xL-xoF" id="0g4-oi-OtX"/>
             </connections>

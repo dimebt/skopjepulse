@@ -5,8 +5,7 @@ target 'SkopjePulse' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for SkopjePulse
-  pod 'Device', '~> 3.2.1'
+  # Pods for SkopjePulse  
   pod 'lottie-ios'
 
   target 'SkopjePulseTests' do

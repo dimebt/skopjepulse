@@ -15,10 +15,17 @@ struct Sensor: Codable {
     let comments: String
     let type: String
     let description: String
-    let status: String
+    let status: StatusTypeEnum
 
     enum CodingKeys: String, CodingKey {
         case sensorId, position, comments, type, description, status
+    }
+    
+    enum StatusTypeEnum: String, Codable {
+        case active = "ACTIVE"
+        case inactive = "INACTIVE"
+        case not_claimed = "NOT_CLAIMED"
+        case banned = "BANNED"
     }
 }
 

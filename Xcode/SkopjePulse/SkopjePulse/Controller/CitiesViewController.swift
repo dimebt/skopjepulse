@@ -20,17 +20,6 @@ class CitiesViewController: UIViewController, Storyboarded {
         //showLoader()
         
         configureCityTableView()
-        
-//        let sensorsEndpointBitola = EndpointFactory.create(for: PulseEco.bitola, endpoint: .Sensors)!
-//        let sensorData24h = EndpointFactory.create(for: .Skopje, endpoint: .Data24h)!
-//        let fetcher = NetworkFetcher<Sensors>()
-//        fetcher.fetch(from: sensorsEndpointBitola) { result in
-//            print(result)
-//        }
-//        LocalJsonFetcher<Sensors>().fetch(from: URL(string: "restSensorsBitola")!) { (result) in
-//            print(result)
-//        }
-        
     }
     
     private func configureCityTableView() {
