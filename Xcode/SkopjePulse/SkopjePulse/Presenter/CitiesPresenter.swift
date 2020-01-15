@@ -13,14 +13,21 @@ class CitiesPresenter: NSObject {
       
     public var dataService: CitiesDataService!
     @Published public var searchText: String = ""
-    public var serachTextPublisher: AnyPublisher<String, Never> {
+    public var searchTextPublisher: AnyPublisher<String, Never> {
         return $searchText
             .debounce(for: 0.6, scheduler: RunLoop.main)
             .removeDuplicates()
+            .print()
             .eraseToAnyPublisher()
     }
     
-    init(dataService: CitiesDataService = CitiesDataService(cities: PulseEco.cities)) {        
+    public var searchTextSubscriber: AnyCancellable?
+    
+    init(dataService: CitiesDataService = CitiesDataService(cities: PulseEco.cities)) {
+        super.init()
         self.dataService = dataService
+        searchTextSubscriber = searchTextPublisher.sink(receiveValue: { (value) in
+            print(value)
+        })
     }
 }
