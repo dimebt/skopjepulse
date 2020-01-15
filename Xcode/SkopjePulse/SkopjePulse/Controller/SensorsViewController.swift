@@ -88,7 +88,6 @@ extension SensorsViewController: SensorsPresenterDelegate {
     }
 }
 
-
 extension SensorsViewController: SensorCellDelegate {
     func toggle(sensor: Sensor, with state: SensorState) {
         presenter.setSensorState(for: sensor, state: state)

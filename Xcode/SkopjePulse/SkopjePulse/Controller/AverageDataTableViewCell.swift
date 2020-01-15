@@ -18,5 +18,17 @@ class AverageDataTableViewCell: UITableViewCell {
     public func configure(with averageData: AverageData) {
         self.descriptionLabel.text = averageData.description.rawValue
         self.averageValueLabel.text = averageData.gatAverageValue
+        switch averageData.increeseIcon {
+        case .up:
+            self.increeseIcon.isHidden = false
+            self.increeseIcon.image = UIImage(named: averageData.increeseIcon.rawValue)
+        case .down:
+            self.increeseIcon.isHidden = false
+            self.increeseIcon.image = UIImage(named: averageData.increeseIcon.rawValue)
+        case .equal:
+            self.increeseIcon.isHidden = true
+        case .noimage:
+            self.increeseIcon.isHidden = true
+        }
     }
 }

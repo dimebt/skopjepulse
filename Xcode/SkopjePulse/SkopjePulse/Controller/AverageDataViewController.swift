@@ -14,13 +14,19 @@ class AverageDataViewController: UIViewController, Storyboarded {
     weak var coordinator: MainCoordinator?
     @IBOutlet weak var avgDataTableView: UITableView!
     @IBOutlet weak var sensorTitle: UILabel!
-    @IBOutlet weak var sensorAvgData24h: UILabel!
+    @IBOutlet weak var segment: UISegmentedControl!
+    @IBOutlet weak var measurementLabel: UILabel!
     
     // MARK: - Private properties
     private var averageData: [AverageData]!
 
     @IBAction func dismiss(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func segmentPressed(_ sender: Any) {
+        print("\(segment.selectedSegmentIndex)")
+        presenter.processAverageData(for: segment.selectedSegmentIndex)
     }
     
     override func viewDidLoad() {
@@ -65,6 +71,7 @@ extension AverageDataViewController: AverageDataPresenterDelegate {
     }
     func finishedLoading(averageData: [AverageData]) {
         self.averageData = averageData
+        self.measurementLabel.text = self.averageData.first?.getMeasurementType
         self.avgDataTableView.reloadData()
         hideLoader()
     }

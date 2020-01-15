@@ -13,16 +13,24 @@ struct AverageData {
     let description: AverageLabelDescription
     let averageValue: Double
     let increeseIcon: AverageIncreeseIcon
+    let particleType: SensorTypeEnum
     
     public var gatAverageValue: String {
-        guard let average = averageValue.int else { return "- μg/m3"}
-        return "\(average) μg/m3"
+        guard let average = averageValue.int else { return "- \(particleType.mesurementUnits)"}
+        return "\(average) \(particleType.mesurementUnits)"
     }
+    
+    public var getMeasurementType: String {
+        return particleType.rawValue.capitalFirstLetter
+    }
+    
 }
 
-enum AverageIncreeseIcon {
+enum AverageIncreeseIcon: String {
     case up
     case down
+    case equal
+    case noimage
 }
 
 enum AverageLabelDescription: String {

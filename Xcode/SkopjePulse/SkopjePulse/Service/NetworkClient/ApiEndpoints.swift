@@ -18,6 +18,9 @@ import Foundation
 
     - get sensor data for city
     https://[CITY].pulse.eco/rest/data24h
+ 
+
+
 */
 
 struct PulseEco {
@@ -33,6 +36,15 @@ struct PulseEco {
     static let kichevo = City(name: "Kichevo")
     static let kumanovo = City(name: "Kumanovo")
     static let nis = City(name: "Nis")
+    static let novoselo = City(name: "Novo Selo")
+    static let portland = City(name: "Portland")
+    static let shtip = City(name: "Shtip")
+    static let sofia = City(name: "Sofia")
+    static let strumica = City(name: "Strumica")
+    static let targumures = City(name: "Targu Mures")
+    static let tetovo = City(name: "Tetovo")
+    static let yambol = City(name: "Yambol")
+    static let zagreb = City(name: "Zagreb")
     
     public static let cities = [
         skopje,
@@ -46,7 +58,16 @@ struct PulseEco {
         grandRapids,
         kichevo,
         kumanovo,
-        nis
+        nis,
+        novoselo,
+        portland,
+        shtip,
+        sofia,
+        strumica,
+        targumures,
+        tetovo,
+        yambol,
+        zagreb
     ]
 }
 
@@ -65,7 +86,7 @@ struct EndpointFactory {
     public static func create(for city: City, endpoint: Endpoint) -> URL? {
         switch endpoint {
         case .Sensors:
-            guard let url = URL(string: "https://\(city.name.lowercased()).pulse.eco/rest/sensor") else { return nil}
+            guard let url = URL(string: "https://\(city.name.lowercased().replacingOccurrences(of: " ", with: "-")).pulse.eco/rest/sensor") else { return nil}
             return url
         case .Data24h:
             guard let url = URL(string: "https://\(city.name.lowercased()).pulse.eco/rest/data24h") else { return nil}

@@ -15,4 +15,8 @@ extension String {
         guard let date = formatter.date(from: self) else { return nil }
         return date
     }
+    
+    public var capitalFirstLetter: String {
+        return prefix(1).capitalized + dropFirst()
+    }
 }

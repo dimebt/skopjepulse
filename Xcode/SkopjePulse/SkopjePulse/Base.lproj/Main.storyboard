@@ -13,6 +13,9 @@
         <array key="Lato-Light.ttf">
             <string>Lato-Light</string>
         </array>
+        <array key="Lato-LightItalic.ttf">
+            <string>Lato-LightItalic</string>
+        </array>
         <array key="Lato-Regular.ttf">
             <string>Lato-Regular</string>
         </array>
@@ -89,11 +92,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WDB-eL-yzT">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                 <subviews>
-                                    <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="qbz-Kx-tzK">
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search term" translatesAutoresizingMaskIntoConstraints="NO" id="qbz-Kx-tzK">
                                         <rect key="frame" x="20" y="106" width="374" height="89"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="khf-LJ-Hgf"/>
+                                        </connections>
                                     </searchBar>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="pulse-logo" translatesAutoresizingMaskIntoConstraints="NO" id="MdO-TL-wF1">
                                         <rect key="frame" x="40" y="52" width="334" height="38"/>
@@ -163,6 +169,7 @@
                     </view>
                     <connections>
                         <outlet property="cityTableView" destination="lBC-CL-1jA" id="heE-dU-iTo"/>
+                        <outlet property="searchBar" destination="qbz-Kx-tzK" id="q0p-lK-6AG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -280,17 +287,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="pulse-logo" translatesAutoresizingMaskIntoConstraints="NO" id="iHE-Mb-6oO">
-                                <rect key="frame" x="40" y="52" width="334" height="38"/>
+                                <rect key="frame" x="40" y="52" width="334" height="76"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average sensor data for sensor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5h-x8-lkR">
-                                <rect key="frame" x="20" y="110" width="209.5" height="19.5"/>
+                                <rect key="frame" x="20" y="148" width="223.5" height="19"/>
                                 <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0qA-5X-KzT">
-                                <rect key="frame" x="0.0" y="278.5" width="414" height="617.5"/>
+                                <rect key="frame" x="0.0" y="316" width="414" height="580"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -307,17 +314,25 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sensor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7B-t7-mIy">
-                                <rect key="frame" x="20" y="149.5" width="75.5" height="30"/>
+                                <rect key="frame" x="20" y="187" width="79" height="30"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eyF-na-RzS">
-                                <rect key="frame" x="152.5" y="199.5" width="109" height="32"/>
+                                <rect key="frame" x="-17.5" y="237" width="449" height="32"/>
                                 <segments>
-                                    <segment title="pm10"/>
-                                    <segment title="pm25"/>
+                                    <segment title="" image="pm10_particles"/>
+                                    <segment title="" image="pm25_particles"/>
+                                    <segment title="" image="humidity"/>
+                                    <segment title="" image="noise"/>
+                                    <segment title="" image="pressure"/>
+                                    <segment title="" image="temperature"/>
                                 </segments>
+                                <color key="tintColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="segmentPressed:" destination="qgA-bD-fo6" eventType="valueChanged" id="1zq-P0-YJk"/>
+                                </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dl-VY-SoH">
                                 <rect key="frame" x="366" y="54" width="38" height="38"/>
@@ -331,19 +346,29 @@
                                     <action selector="dismiss:" destination="qgA-bD-fo6" eventType="touchUpInside" id="CED-Dm-rSN"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MesurmentType" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0c4-6I-xS4">
+                                <rect key="frame" x="0.0" y="280" width="414" height="16"/>
+                                <fontDescription key="fontDescription" name="Lato-LightItalic" family="Lato" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="0qA-5X-KzT" firstAttribute="top" secondItem="0c4-6I-xS4" secondAttribute="bottom" constant="20" id="3EO-ao-f3L"/>
+                            <constraint firstItem="0c4-6I-xS4" firstAttribute="top" secondItem="eyF-na-RzS" secondAttribute="bottom" constant="12" id="A4H-SO-5Tn"/>
                             <constraint firstItem="dbE-Wc-ZG4" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="T7B-t7-mIy" secondAttribute="trailing" symbolic="YES" id="Ala-Ve-cUd"/>
                             <constraint firstItem="T7B-t7-mIy" firstAttribute="leading" secondItem="c5h-x8-lkR" secondAttribute="leading" id="Aqr-rx-fmx"/>
                             <constraint firstItem="iHE-Mb-6oO" firstAttribute="top" secondItem="iog-AF-KPj" secondAttribute="top" constant="52" id="D5O-HJ-9SQ"/>
                             <constraint firstItem="dbE-Wc-ZG4" firstAttribute="trailing" secondItem="iHE-Mb-6oO" secondAttribute="trailing" constant="40" id="EgX-nv-oKW"/>
                             <constraint firstItem="c5h-x8-lkR" firstAttribute="top" secondItem="iHE-Mb-6oO" secondAttribute="bottom" constant="20" id="FfN-hU-qDe"/>
+                            <constraint firstItem="0c4-6I-xS4" firstAttribute="centerX" secondItem="dbE-Wc-ZG4" secondAttribute="centerX" id="HyO-w1-yro"/>
                             <constraint firstItem="eyF-na-RzS" firstAttribute="centerX" secondItem="dbE-Wc-ZG4" secondAttribute="centerX" id="IbN-qm-g7M"/>
                             <constraint firstItem="dbE-Wc-ZG4" firstAttribute="trailing" secondItem="7dl-VY-SoH" secondAttribute="trailing" constant="10" id="K8W-fU-3M9"/>
                             <constraint firstItem="iHE-Mb-6oO" firstAttribute="leading" secondItem="dbE-Wc-ZG4" secondAttribute="leading" constant="40" id="ZAS-6C-J3L"/>
                             <constraint firstItem="c5h-x8-lkR" firstAttribute="leading" secondItem="dbE-Wc-ZG4" secondAttribute="leading" constant="20" id="bWV-VJ-uZ9"/>
                             <constraint firstAttribute="bottom" secondItem="0qA-5X-KzT" secondAttribute="bottom" id="dRE-PI-Ov6"/>
+                            <constraint firstItem="0c4-6I-xS4" firstAttribute="leading" secondItem="dbE-Wc-ZG4" secondAttribute="leading" id="dv6-aM-3hO"/>
                             <constraint firstItem="dbE-Wc-ZG4" firstAttribute="trailing" secondItem="0qA-5X-KzT" secondAttribute="trailing" id="eTq-i3-Zhf"/>
                             <constraint firstItem="T7B-t7-mIy" firstAttribute="top" secondItem="c5h-x8-lkR" secondAttribute="bottom" constant="20" id="fbF-pz-8ge"/>
                             <constraint firstItem="dbE-Wc-ZG4" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="c5h-x8-lkR" secondAttribute="trailing" symbolic="YES" id="feI-U3-rGc"/>
@@ -364,6 +389,8 @@
                     </view>
                     <connections>
                         <outlet property="avgDataTableView" destination="0qA-5X-KzT" id="ccH-DG-mS5"/>
+                        <outlet property="measurementLabel" destination="0c4-6I-xS4" id="Y23-n7-xzq"/>
+                        <outlet property="segment" destination="eyF-na-RzS" id="5Zt-rA-mOZ"/>
                         <outlet property="sensorTitle" destination="T7B-t7-mIy" id="d8X-Ra-0r5"/>
                     </connections>
                 </viewController>
@@ -374,6 +401,12 @@
     </scenes>
     <resources>
         <image name="close" width="27" height="27"/>
+        <image name="humidity" width="28" height="28"/>
+        <image name="noise" width="28" height="28"/>
+        <image name="pm10_particles" width="28" height="28"/>
+        <image name="pm25_particles" width="28" height="28"/>
+        <image name="pressure" width="28" height="28"/>
         <image name="pulse-logo" width="167" height="38"/>
+        <image name="temperature" width="28" height="28"/>
     </resources>
 </document>

@@ -28,6 +28,23 @@ enum SensorTypeEnum: String, Codable {
     case pm25 = "pm25"
     case pressure = "pressure"
     case temperature = "temperature"
+    
+    var mesurementUnits: String {
+        switch self {
+        case .humidity:
+            return "%"
+        case .noise:
+            return "units"
+        case .pm10:
+            return "μg/m3"
+        case .pm25:
+            return "μg/m3"
+        case .pressure:
+            return "hPa"
+        case .temperature:
+            return "°C"
+        }
+    }
 }
 
 typealias SensorData = [SensorValue]

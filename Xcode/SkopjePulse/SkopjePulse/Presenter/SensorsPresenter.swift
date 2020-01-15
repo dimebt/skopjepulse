@@ -35,6 +35,8 @@ class SensorsPresenter: NSObject {
     
     public func fetchSensors() {
         delegate?.startLoading()
+        
+        // error nil endpoint
         fetchService.fetch(from: endpoint) { (result) in
             switch result {
             case .success(let sensors):

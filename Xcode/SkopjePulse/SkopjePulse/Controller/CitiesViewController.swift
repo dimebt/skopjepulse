@@ -13,13 +13,15 @@ class CitiesViewController: UIViewController, Storyboarded {
     public var presenter: CitiesPresenter!
     weak var coordinator: MainCoordinator?
     @IBOutlet weak var cityTableView: UITableView!
-
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //showLoader()
-        
         configureCityTableView()
+    }
+    
+    public func configureSearchBar() {
+        searchBar.searchTextField.textColor = .white
     }
     
     private func configureCityTableView() {
@@ -39,5 +41,15 @@ extension CitiesViewController: UITableViewDelegate {
         let city = presenter.dataService.cities[indexPath.row]
         coordinator?.showSensorsViewController(for: city)
         print("Selected \(city.name)")
+    }
+}
+
+extension CitiesViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.presenter.searchText = searchText
+        print("Searching for city: \(searchText)")
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 }
