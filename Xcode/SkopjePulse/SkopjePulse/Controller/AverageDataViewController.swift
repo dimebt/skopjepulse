@@ -63,11 +63,11 @@ extension AverageDataViewController: UITableViewDelegate {
 
 extension AverageDataViewController: AverageDataPresenterDelegate {
     func loading() {
-        showLoader()
+        coordinator?.showloader()
     }
     func finishedLoading(averageData: [AverageData]) {
         self.measurementLabel.text = averageData.first?.getMeasurementType
         self.avgDataTableView.reloadData()
-        hideLoader()
+        coordinator?.hideLoader()
     }
 }

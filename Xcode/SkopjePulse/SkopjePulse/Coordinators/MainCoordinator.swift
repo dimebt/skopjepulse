@@ -29,7 +29,7 @@ class MainCoordinator: Coordinator {
         let sensorsViewController = SensorsViewController.instantiate()
         sensorsViewController.presenter = presenter
         sensorsViewController.coordinator = self
-        navigationController.pushViewController(sensorsViewController, animated: true)
+        navigationController.pushViewController(sensorsViewController, animated: false)
     }
     
     func showAverageDataViewController(for city: City, sensor: Sensor, sensorData: SensorData) {
@@ -38,5 +38,18 @@ class MainCoordinator: Coordinator {
         averageDataViewController.presenter = presenter
         averageDataViewController.coordinator = self
         navigationController.pushViewController(averageDataViewController, animated: true)
+    }
+    
+    func showloader() {
+        let loadingViewController = LoadingViewController.instantiate()
+        navigationController.pushViewController(loadingViewController, animated: false)
+    }
+    
+    func hideLoader() {
+        if let _ = navigationController.topViewController as? LoadingViewController {
+            DispatchQueue.main.asyncAfter(deadline: .now()) {
+                self.navigationController.popViewController(animated: false)
+            }
+        }
     }
 }

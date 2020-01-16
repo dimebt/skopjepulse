@@ -59,7 +59,7 @@
                                         <color key="value" red="0.074509803921568626" green="0.062745098039215685" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
-                                        <color key="value" red="0.21568627450980393" green="0.20784313725490194" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.074509803921568626" green="0.062745098039215685" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -73,9 +73,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eEG-J5-TZe"/>
                     </view>
-                    <connections>
-                        <outlet property="animation" destination="VZB-TS-R2L" id="5YZ-DC-aLZ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q1d-Qd-UQU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

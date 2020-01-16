@@ -81,12 +81,12 @@ extension SensorsViewController: UITableViewDataSource {
 
 extension SensorsViewController: SensorsPresenterDelegate {
     func startLoading() {
-        showLoader()
+        coordinator?.showloader()
     }
     
     func finishLoading() {
         self.sensorsTableView.reloadData()
-        hideLoader()
+        coordinator?.hideLoader()
     }
     
     func sensorStateChanged() {
