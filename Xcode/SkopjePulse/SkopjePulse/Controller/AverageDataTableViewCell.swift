@@ -12,8 +12,7 @@ class AverageDataTableViewCell: UITableViewCell {
     
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var averageValueLabel: UILabel!
-    @IBOutlet weak var increeseIcon: UIImageView!
-    
+    @IBOutlet weak var increeseIcon: UIImageView!    
     
     public func configure(with averageData: AverageData) {
         self.descriptionLabel.text = averageData.description.rawValue

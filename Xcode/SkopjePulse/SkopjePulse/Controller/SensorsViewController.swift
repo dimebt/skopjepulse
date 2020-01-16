@@ -13,9 +13,9 @@ class SensorsViewController: UIViewController, Storyboarded {
     public var presenter: SensorsPresenter!    
     weak var coordinator: MainCoordinator?
     @IBOutlet weak var sensorsTableView: UITableView!
-    
-    // MARK: - Private properties
-    private var sensors: Sensors!
+    @IBOutlet weak var searchBar: PulseUISearchBar!
+    @IBOutlet weak var noRecords1: UILabel!
+    @IBOutlet weak var noRecords2: UILabel!
     
     @IBAction func dismiss(_ sender: Any) {
         navigationController?.popViewController(animated: true)
@@ -23,9 +23,9 @@ class SensorsViewController: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureSensorTableView()
         presenter.delegate = self
-        presenter.fetchSensors()        
+        presenter.fetchSensors()
+        configureSensorTableView()
     }
     
     private func configureSensorTableView() {
@@ -35,6 +35,12 @@ class SensorsViewController: UIViewController, Storyboarded {
         sensorsTableView.register(sensorCell, forCellReuseIdentifier: presenter.cellIdentifier)
         sensorsTableView.delaysContentTouches = false
     }
+    
+    //  MARK: - Dismiss the keyboard when tap on view
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        self.view.endEditing(true)
+    }
 }
 
 extension SensorsViewController: UITableViewDelegate {
@@ -42,54 +48,74 @@ extension SensorsViewController: UITableViewDelegate {
         return 50
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("selected sensor at \(indexPath.row)")
-        presenter.tapOnSensor(sensor: sensors[indexPath.row])
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {        
+        presenter.canTap(on: presenter.sensors[indexPath.row])
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.view.endEditing(true)
     }
 }
 
 extension SensorsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard sensors != nil else { return 0 }
-        return sensors.count
+        guard presenter.sensors != nil else { return 0 }
+        if presenter.sensors.count == 0 {
+            self.noRecords1.isHidden = false
+            self.noRecords2.isHidden = false
+        } else {
+            self.noRecords1.isHidden = true
+            self.noRecords2.isHidden = true
+        }
+        return presenter.sensors.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: presenter.cellIdentifier, for: indexPath) as! SensorTableViewCell
         cell.delegate = self
-        let sensor = sensors[indexPath.row]
+        let sensor = presenter.sensors[indexPath.row]
         cell.configure(with: sensor)
-        cell.setState(state: self.presenter.getSensorState(for: sensor))
+        cell.configureState(state: presenter.getState(for: sensor))
         return cell
     }
 }
 
-extension SensorsViewController: SensorsPresenterDelegate {    
+extension SensorsViewController: SensorsPresenterDelegate {
     func startLoading() {
         showLoader()
     }
     
-    func finishLoading(with sensors: Sensors) {
-        print(sensors)
-        self.sensors = sensors
+    func finishLoading() {
         self.sensorsTableView.reloadData()
         hideLoader()
     }
     
-    func sensorStateSaved() {
-        self.sensorsTableView.reloadData()
+    func sensorStateChanged() {
+        sensorsTableView.reloadData()
     }
     
     func errorFetching(error: Error) {
     }
     
-    func showSensorDetails(city: City, sensor: Sensor) {
-        coordinator?.showAverageDataViewController(for: city, sensor: sensor)
-        print("Show sensor details for \(city.name) \(sensor)")
+    func showSensorDetails(city: City, sensor: Sensor, sensorData: SensorData) {
+        coordinator?.showAverageDataViewController(for: city, sensor: sensor, sensorData: sensorData)
+    }
+    func didFinishQuering() {
+        sensorsTableView.reloadData()
     }
 }
 
 extension SensorsViewController: SensorCellDelegate {
     func toggle(sensor: Sensor, with state: SensorState) {
-        presenter.setSensorState(for: sensor, state: state)
+        presenter.toggle(sensor: sensor, state: state)
+    }
+}
+
+
+extension SensorsViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        presenter.searchText = searchText
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 }

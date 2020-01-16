@@ -8,6 +8,7 @@
 
 import Foundation
 
+//  MARK: - SensorState Model
 enum SensorState: String {
     case disabled
     case enabled
@@ -17,6 +18,17 @@ enum SensorState: String {
             return .enabled
         } else {
             return .disabled
+        }
+    }
+}
+
+extension SensorState {
+    var corespondingBoolState: Bool {
+        switch self {
+        case .disabled:
+            return false
+        case .enabled:
+            return true
         }
     }
 }

@@ -8,6 +8,7 @@
 
 import Foundation
 
+//  MARK: - City Model
 protocol NameRepresentable {
     var name: String { get }
 }

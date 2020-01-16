@@ -31,7 +31,7 @@ class SensorTableViewCell: UITableViewCell {
         }
     }
     
-    public func setState(state: SensorState) {
+    public func configureState(state: SensorState) {
         self.state = state
         switch state {
         case .disabled:
@@ -45,7 +45,6 @@ class SensorTableViewCell: UITableViewCell {
     }
     
     @IBAction func disablePressed(_ sender: Any) {
-        print("Toggle sensor state!")        
         delegate?.toggle(sensor: self.sensor, with: self.state.toggle())
     }
     

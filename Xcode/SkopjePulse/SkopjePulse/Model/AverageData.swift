@@ -8,6 +8,7 @@
 
 import Foundation
 
+//  MARK: - AverageData Model
 struct AverageData {
     
     let description: AverageLabelDescription

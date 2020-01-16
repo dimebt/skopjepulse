@@ -8,7 +8,7 @@
 
 import Foundation
 
-// MARK: - Sensor Model
+//  MARK: - Sensor Model
 struct Sensor: Codable {
     let sensorId: String
     let position: String

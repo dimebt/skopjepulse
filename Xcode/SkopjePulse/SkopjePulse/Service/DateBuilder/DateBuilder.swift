@@ -20,7 +20,7 @@ class DateBuilder {
     private var second: Int = 0
     
     
-    /// Build the date with year
+    // Build the date with year, month, day, hour, minute, second
     /// - Parameter year: Int number defining the year
     func year(_ year: Int) -> Self {
         self.year = year

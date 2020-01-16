@@ -15,24 +15,34 @@ class SearchServiceTests: XCTestCase {
     var city2: City!
     var city3: City!
     var cities: [City]!
-    var searchService: SearchService!
+    var searchService: CitySearchService!
 
     override func setUp() {
         city1 = City(name: "Skopje")
         city2 = City(name: "Bitola")
         city3 = City(name: "Kavadarci")
         cities = [city1, city2, city3]
-        searchService = SearchService()
+        searchService = CitySearchService()
     }
 
     override func tearDown() {
         cities = nil
     }
     
+    func testSearchService_SearchForBlank_Returns_AllArray() {
+        let searchTerm = ""
+        
+        searchService.search(term: searchTerm, bag: cities)
+        let queryResults = searchService.queryResults
+        
+        XCTAssertNotNil(queryResults)
+        XCTAssertEqual(queryResults?.count, cities.count)
+    }
+    
     func testSearchService_SearchForTerm_ABC_Returns_ZeroCountArray() {
         let searchTerm = "ABC"
         
-        searchService.search(term: searchTerm, cities: cities)
+        searchService.search(term: searchTerm, bag: cities)
         let queryResults = searchService.queryResults
         
         XCTAssertNotNil(queryResults)
@@ -42,7 +52,7 @@ class SearchServiceTests: XCTestCase {
     func testSearchService_SearchForTerm_a_Returns_TwoCities() {
         let searchTerm = "A"
         
-        searchService.search(term: searchTerm, cities: cities)
+        searchService.search(term: searchTerm, bag: cities)
         let queryResults = searchService.queryResults
         
         XCTAssertNotNil(queryResults)
@@ -52,7 +62,7 @@ class SearchServiceTests: XCTestCase {
     func testSearchService_SearchForTerm_B_Returns_Bitola() {
         let searchTerm = "B"
         
-        searchService.search(term: searchTerm, cities: cities)
+        searchService.search(term: searchTerm, bag: cities)
         let queryResults = searchService.queryResults
         
         XCTAssertNotNil(queryResults)
@@ -66,7 +76,7 @@ class SearchServiceTests: XCTestCase {
     func testSearchService_SearchForTerm_Ka_Returns_Kavadarci() {
         let searchTerm = "Ka"
         
-        searchService.search(term: searchTerm, cities: cities)
+        searchService.search(term: searchTerm, bag: cities)
         let queryResults = searchService.queryResults
         
         XCTAssertNotNil(queryResults)

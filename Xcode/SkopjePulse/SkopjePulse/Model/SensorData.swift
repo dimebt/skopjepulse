@@ -8,7 +8,7 @@
 
 import Foundation
 
-// MARK: - SensorData Model
+//  MARK: - SensorData Model
 struct SensorValue: Codable {
     let sensorId: String
     let stamp: Date

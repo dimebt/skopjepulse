@@ -7,6 +7,7 @@ target 'SkopjePulse' do
 
   # Pods for SkopjePulse  
   pod 'lottie-ios'
+  pod 'RealmSwift'
 
   target 'SkopjePulseTests' do
     inherit! :search_paths

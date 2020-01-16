@@ -92,7 +92,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WDB-eL-yzT">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                 <subviews>
-                                    <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search term" translatesAutoresizingMaskIntoConstraints="NO" id="qbz-Kx-tzK">
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Enter search term" translatesAutoresizingMaskIntoConstraints="NO" id="qbz-Kx-tzK" customClass="PulseUISearchBar" customModule="SkopjePulse" customModuleProvider="target">
                                         <rect key="frame" x="20" y="106" width="374" height="89"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -146,15 +146,33 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Y3y-cJ-Hgo"/>
                                 </connections>
                             </tableView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No city was found with this search criteria." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aK2-xg-8Qy">
+                                <rect key="frame" x="62" y="359" width="290" height="43.5"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try searching with another term." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4b-ll-tYO">
+                                <rect key="frame" x="62" y="411" width="290" height="16"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="F4b-ll-tYO" firstAttribute="top" secondItem="aK2-xg-8Qy" secondAttribute="bottom" constant="8.5" id="0bm-aP-WW4"/>
                             <constraint firstItem="WDB-eL-yzT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4pc-J6-2v8"/>
                             <constraint firstItem="Eyl-0c-28k" firstAttribute="trailing" secondItem="WDB-eL-yzT" secondAttribute="trailing" id="57K-Q2-qKT"/>
                             <constraint firstItem="WDB-eL-yzT" firstAttribute="leading" secondItem="Eyl-0c-28k" secondAttribute="leading" id="C0G-Yn-mRa"/>
+                            <constraint firstItem="aK2-xg-8Qy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.85" id="Ebq-U6-UTC"/>
                             <constraint firstItem="lBC-CL-1jA" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="Fxa-x4-C4x"/>
                             <constraint firstItem="lBC-CL-1jA" firstAttribute="top" secondItem="WDB-eL-yzT" secondAttribute="bottom" id="WFi-qb-uJH"/>
+                            <constraint firstItem="aK2-xg-8Qy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a7N-mJ-TWj"/>
+                            <constraint firstItem="aK2-xg-8Qy" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="jiq-6U-Wsh"/>
                             <constraint firstItem="lBC-CL-1jA" firstAttribute="leading" secondItem="Eyl-0c-28k" secondAttribute="leading" id="kum-o8-L2J"/>
+                            <constraint firstItem="F4b-ll-tYO" firstAttribute="width" secondItem="aK2-xg-8Qy" secondAttribute="width" id="lmx-ap-wgO"/>
+                            <constraint firstItem="F4b-ll-tYO" firstAttribute="centerX" secondItem="aK2-xg-8Qy" secondAttribute="centerX" id="oq2-Db-J6h"/>
                             <constraint firstItem="lBC-CL-1jA" firstAttribute="trailing" secondItem="Eyl-0c-28k" secondAttribute="trailing" id="qLP-2g-aJQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Eyl-0c-28k"/>
@@ -169,6 +187,8 @@
                     </view>
                     <connections>
                         <outlet property="cityTableView" destination="lBC-CL-1jA" id="heE-dU-iTo"/>
+                        <outlet property="noRecordLabel1" destination="aK2-xg-8Qy" id="OV5-tw-E3c"/>
+                        <outlet property="noRecordLabel2" destination="F4b-ll-tYO" id="xKA-9a-vcE"/>
                         <outlet property="searchBar" destination="qbz-Kx-tzK" id="q0p-lK-6AG"/>
                     </connections>
                 </viewController>
@@ -187,11 +207,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TmX-RH-NCG">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                 <subviews>
-                                    <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="P2X-og-kME">
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Enter search term" translatesAutoresizingMaskIntoConstraints="NO" id="P2X-og-kME" customClass="PulseUISearchBar" customModule="SkopjePulse" customModuleProvider="target">
                                         <rect key="frame" x="20" y="106" width="374" height="89"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Uk6-UB-4ID" id="d8h-LZ-tQ1"/>
+                                        </connections>
                                     </searchBar>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="pulse-logo" translatesAutoresizingMaskIntoConstraints="NO" id="NsH-Ww-iNy">
                                         <rect key="frame" x="40" y="52" width="334" height="38"/>
@@ -247,18 +270,36 @@
                                     <action selector="dismiss:" destination="Uk6-UB-4ID" eventType="touchUpInside" id="Xpi-cg-Cgd"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No sensor was found with this search criteria." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqO-yo-0Iz">
+                                <rect key="frame" x="83" y="363.5" width="248" height="43.5"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try searching with another term." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRm-b2-aFY">
+                                <rect key="frame" x="86.5" y="415.5" width="241" height="16"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="aqO-yo-0Iz" firstAttribute="centerX" secondItem="4Ry-gq-3lL" secondAttribute="centerX" id="15s-yd-9u4"/>
                             <constraint firstItem="TmX-RH-NCG" firstAttribute="leading" secondItem="4Ry-gq-3lL" secondAttribute="leading" id="5gH-5M-wLS"/>
                             <constraint firstItem="TmX-RH-NCG" firstAttribute="trailing" secondItem="4Ry-gq-3lL" secondAttribute="trailing" id="9aa-pn-K2O"/>
+                            <constraint firstItem="kRm-b2-aFY" firstAttribute="top" secondItem="aqO-yo-0Iz" secondAttribute="bottom" constant="8.5" id="E7h-35-ya1"/>
                             <constraint firstAttribute="bottom" secondItem="OMa-na-g6R" secondAttribute="bottom" id="It9-cv-2m7"/>
                             <constraint firstItem="4Ry-gq-3lL" firstAttribute="trailing" secondItem="OMa-na-g6R" secondAttribute="trailing" id="LCv-wB-5pJ"/>
                             <constraint firstItem="TmX-RH-NCG" firstAttribute="top" secondItem="EUf-JH-Cmg" secondAttribute="top" id="Mwy-Ib-iK1"/>
                             <constraint firstItem="OMa-na-g6R" firstAttribute="top" secondItem="TmX-RH-NCG" secondAttribute="bottom" id="Ruh-eS-iat"/>
+                            <constraint firstItem="aqO-yo-0Iz" firstAttribute="centerY" secondItem="4Ry-gq-3lL" secondAttribute="centerY" multiplier="0.85" id="X4R-Mg-W6s"/>
                             <constraint firstItem="4Ry-gq-3lL" firstAttribute="trailing" secondItem="IEB-tq-37t" secondAttribute="trailing" constant="10" id="ak1-vf-ifr"/>
+                            <constraint firstItem="aqO-yo-0Iz" firstAttribute="width" secondItem="EUf-JH-Cmg" secondAttribute="width" multiplier="0.599034" id="b0T-IV-M3d"/>
                             <constraint firstItem="OMa-na-g6R" firstAttribute="leading" secondItem="4Ry-gq-3lL" secondAttribute="leading" id="nnI-gI-rRy"/>
                             <constraint firstItem="IEB-tq-37t" firstAttribute="top" secondItem="4Ry-gq-3lL" secondAttribute="top" constant="10" id="o58-yc-F5f"/>
+                            <constraint firstItem="kRm-b2-aFY" firstAttribute="width" secondItem="aqO-yo-0Iz" secondAttribute="width" multiplier="0.971774" id="rE0-Vh-N1X"/>
+                            <constraint firstItem="kRm-b2-aFY" firstAttribute="centerX" secondItem="aqO-yo-0Iz" secondAttribute="centerX" id="wmy-gi-vwE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4Ry-gq-3lL"/>
                         <userDefinedRuntimeAttributes>
@@ -271,6 +312,9 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="noRecords1" destination="aqO-yo-0Iz" id="GaN-7b-sDO"/>
+                        <outlet property="noRecords2" destination="kRm-b2-aFY" id="6Fd-yh-4dc"/>
+                        <outlet property="searchBar" destination="P2X-og-kME" id="3IJ-LG-Syy"/>
                         <outlet property="sensorsTableView" destination="OMa-na-g6R" id="tpt-2w-6s7"/>
                     </connections>
                 </viewController>
@@ -297,7 +341,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0qA-5X-KzT">
-                                <rect key="frame" x="0.0" y="316" width="414" height="580"/>
+                                <rect key="frame" x="0.0" y="323" width="414" height="573"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -347,7 +391,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MesurmentType" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0c4-6I-xS4">
-                                <rect key="frame" x="0.0" y="280" width="414" height="16"/>
+                                <rect key="frame" x="0.0" y="280" width="414" height="23"/>
                                 <fontDescription key="fontDescription" name="Lato-LightItalic" family="Lato" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -375,7 +419,6 @@
                             <constraint firstItem="eyF-na-RzS" firstAttribute="top" secondItem="T7B-t7-mIy" secondAttribute="bottom" constant="20" id="mC0-B2-uxg"/>
                             <constraint firstItem="0qA-5X-KzT" firstAttribute="leading" secondItem="dbE-Wc-ZG4" secondAttribute="leading" id="mN6-XY-uXH"/>
                             <constraint firstItem="7dl-VY-SoH" firstAttribute="top" secondItem="dbE-Wc-ZG4" secondAttribute="top" constant="10" id="nN0-9H-012"/>
-                            <constraint firstItem="0qA-5X-KzT" firstAttribute="top" secondItem="eyF-na-RzS" secondAttribute="bottom" constant="48" id="s5l-Ul-S5l"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dbE-Wc-ZG4"/>
                         <userDefinedRuntimeAttributes>

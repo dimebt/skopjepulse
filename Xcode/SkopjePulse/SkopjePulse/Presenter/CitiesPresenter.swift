@@ -15,7 +15,7 @@ protocol CitiesPresenterDelegate: class{
 
 class CitiesPresenter {
     
-    private var searchService: SearchService!
+    private var searchService: CitySearchService!
     public var cities: [City]!
     public var cellIdentifier = "cityCell"
     weak var delegate: CitiesPresenterDelegate?
@@ -32,16 +32,17 @@ class CitiesPresenter {
     }
     
     init(cities: [City] = PulseEco.cities,
-         searchService: SearchService = SearchService()) {
+         searchService: CitySearchService = CitySearchService()) {
         self.cities = cities
         self.searchService = searchService
         
         //  MARK: - Setting the subscriber on the publisher $searchText
+        //  Searching for the city in the [City] array with keyboard tapping debounce and removeing duplicate entries
         searchTextSubscriber = $searchText
-            .debounce(for: 0.6, scheduler: RunLoop.main)
-            .removeDuplicates().sink(receiveValue: { (term) in
-                guard !term.isEmpty else { return }
-                searchService.search(term: term, cities: cities)
+            .debounce(for: 0.4, scheduler: RunLoop.main)
+            .removeDuplicates()
+            .sink(receiveValue: { (term) in
+                searchService.search(term: term, bag: cities)
                 self.cities = searchService.queryResults
                 self.delegate?.didFinishQuering()
             })

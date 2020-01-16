@@ -15,17 +15,13 @@ class AverageDataViewController: UIViewController, Storyboarded {
     @IBOutlet weak var avgDataTableView: UITableView!
     @IBOutlet weak var sensorTitle: UILabel!
     @IBOutlet weak var segment: UISegmentedControl!
-    @IBOutlet weak var measurementLabel: UILabel!
-    
-    // MARK: - Private properties
-    private var averageData: [AverageData]!
+    @IBOutlet weak var measurementLabel: UILabel!    
 
     @IBAction func dismiss(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func segmentPressed(_ sender: Any) {
-        print("\(segment.selectedSegmentIndex)")
         presenter.processAverageData(for: segment.selectedSegmentIndex)
     }
     
@@ -34,7 +30,7 @@ class AverageDataViewController: UIViewController, Storyboarded {
         configureAvgDataTableView()
         sensorTitle.text = presenter.getSensorTitle()
         presenter.delegate = self
-        presenter.fetchSensorData()
+        presenter.processDefaultPm10()
     }
     
     private func configureAvgDataTableView() {
@@ -53,8 +49,8 @@ extension AverageDataViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: presenter.cellIdentifier, for: indexPath) as! AverageDataTableViewCell
-        guard self.averageData != nil else { return cell }
-        cell.configure(with: averageData[indexPath.row])
+        guard presenter.averageData != nil else { return cell }
+        cell.configure(with: presenter.averageData[indexPath.row])
         return cell
     }
 }
@@ -70,8 +66,7 @@ extension AverageDataViewController: AverageDataPresenterDelegate {
         showLoader()
     }
     func finishedLoading(averageData: [AverageData]) {
-        self.averageData = averageData
-        self.measurementLabel.text = self.averageData.first?.getMeasurementType
+        self.measurementLabel.text = averageData.first?.getMeasurementType
         self.avgDataTableView.reloadData()
         hideLoader()
     }
