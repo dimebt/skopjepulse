@@ -13,14 +13,15 @@ import Foundation
 // sensors form the REST API [Sensor] and sensors data for the last 24h [SensorData]
 protocol FetchService {
     associatedtype T
+    var timeoutInterval: TimeInterval { get set }
     func fetch(from url: URL, completion: @escaping (Result<T,Error>) -> Void)
 }
 
 //  MARK: - Generic network fetcher
 class NetworkFetcher<T: Decodable>: FetchService {
-    
+    var timeoutInterval: TimeInterval = 30.0
     func fetch(from url: URL, completion: @escaping (Result<T, Error>) -> Void) {
-        let request = URLRequest(url: url, cachePolicy: URLRequest.CachePolicy.reloadIgnoringLocalCacheData, timeoutInterval: 30.0)
+        let request = URLRequest(url: url, cachePolicy: URLRequest.CachePolicy.reloadIgnoringLocalCacheData, timeoutInterval: timeoutInterval)
         URLSession.shared.dataTask(with: request) { (data, response, err) in
             if let error = err {
                 completion(.failure(error))

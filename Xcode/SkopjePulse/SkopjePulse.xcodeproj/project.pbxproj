@@ -55,6 +55,12 @@
 		467DF71923CE1AE0009FCECE /* SensorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467DF71823CE1AE0009FCECE /* SensorState.swift */; };
 		46A09C8223CC882C00BDFD4C /* rest24hBitola.json in Resources */ = {isa = PBXBuildFile; fileRef = 46A09C8123CC882C00BDFD4C /* rest24hBitola.json */; };
 		46A09C8423CC889500BDFD4C /* LocalJsonFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A09C8323CC889500BDFD4C /* LocalJsonFetcher.swift */; };
+		46A9F24C23D0A99B00FECE08 /* SensorDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A9F24B23D0A99B00FECE08 /* SensorDataServiceTests.swift */; };
+		46A9F25023D0AB0700FECE08 /* SensorStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A9F24F23D0AB0700FECE08 /* SensorStateTests.swift */; };
+		46A9F25223D0AD9800FECE08 /* NetworkFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A9F25123D0AD9800FECE08 /* NetworkFetcherTests.swift */; };
+		46A9F25423D0B18C00FECE08 /* MockNetworkFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A9F25323D0B18C00FECE08 /* MockNetworkFetcher.swift */; };
+		46A9F25623D0BB7C00FECE08 /* MockSensorNetworkFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A9F25523D0BB7C00FECE08 /* MockSensorNetworkFetcherTests.swift */; };
+		46A9F25823D0CF5000FECE08 /* SensorValuesMeasurementsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A9F25723D0CF5000FECE08 /* SensorValuesMeasurementsTests.swift */; };
 		46AB756323CC968D0003097F /* CitiesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB756223CC968D0003097F /* CitiesPresenter.swift */; };
 		46AB756523CC9EB80003097F /* SensorsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB756423CC9EB80003097F /* SensorsPresenter.swift */; };
 		46AB756723CC9EE70003097F /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB756623CC9EE70003097F /* City.swift */; };
@@ -138,6 +144,12 @@
 		467DF71823CE1AE0009FCECE /* SensorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorState.swift; sourceTree = "<group>"; };
 		46A09C8123CC882C00BDFD4C /* rest24hBitola.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = rest24hBitola.json; sourceTree = "<group>"; };
 		46A09C8323CC889500BDFD4C /* LocalJsonFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalJsonFetcher.swift; sourceTree = "<group>"; };
+		46A9F24B23D0A99B00FECE08 /* SensorDataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDataServiceTests.swift; sourceTree = "<group>"; };
+		46A9F24F23D0AB0700FECE08 /* SensorStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorStateTests.swift; sourceTree = "<group>"; };
+		46A9F25123D0AD9800FECE08 /* NetworkFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFetcherTests.swift; sourceTree = "<group>"; };
+		46A9F25323D0B18C00FECE08 /* MockNetworkFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkFetcher.swift; sourceTree = "<group>"; };
+		46A9F25523D0BB7C00FECE08 /* MockSensorNetworkFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSensorNetworkFetcherTests.swift; sourceTree = "<group>"; };
+		46A9F25723D0CF5000FECE08 /* SensorValuesMeasurementsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorValuesMeasurementsTests.swift; sourceTree = "<group>"; };
 		46AB756223CC968D0003097F /* CitiesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesPresenter.swift; sourceTree = "<group>"; };
 		46AB756423CC9EB80003097F /* SensorsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorsPresenter.swift; sourceTree = "<group>"; };
 		46AB756623CC9EE70003097F /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
@@ -419,9 +431,11 @@
 		46384BE423CF11F60041AD91 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
-				4651A9A923CC828900985EDC /* TestStringToDateConversion.swift */,
-				46384BE523CF12210041AD91 /* AverageArrayExtensionTests.swift */,
+				46A9F24B23D0A99B00FECE08 /* SensorDataServiceTests.swift */,
 				4655BAED23CF78E600C388BA /* SearchServiceTests.swift */,
+				46384BE523CF12210041AD91 /* AverageArrayExtensionTests.swift */,
+				4651A9A923CC828900985EDC /* TestStringToDateConversion.swift */,
+				46A9F25723D0CF5000FECE08 /* SensorValuesMeasurementsTests.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -429,13 +443,15 @@
 		4651A9A023CC826600985EDC /* SkopjePulseTests */ = {
 			isa = PBXGroup;
 			children = (
-				46A09C8023CC87ED00BDFD4C /* Stubs */,
-				46D0A56523CDC6B1009DC2E6 /* Mocks */,
+				46384BE423CF11F60041AD91 /* Logic */,
 				46D0A55D23CD9FF4009DC2E6 /* Presenter Tests */,
 				46D0A55A23CD9D39009DC2E6 /* Model Tests */,
 				46002D6623CD9317009425AE /* ViewController Tests */,
-				46384BE423CF11F60041AD91 /* Logic */,
+				46A09C8023CC87ED00BDFD4C /* Stubs */,
+				46D0A56523CDC6B1009DC2E6 /* Mocks */,
 				4651A9A323CC826600985EDC /* Info.plist */,
+				46A9F25123D0AD9800FECE08 /* NetworkFetcherTests.swift */,
+				46A9F25523D0BB7C00FECE08 /* MockSensorNetworkFetcherTests.swift */,
 			);
 			path = SkopjePulseTests;
 			sourceTree = "<group>";
@@ -519,6 +535,7 @@
 			isa = PBXGroup;
 			children = (
 				46D0A55B23CD9D59009DC2E6 /* CityStructTests.swift */,
+				46A9F24F23D0AB0700FECE08 /* SensorStateTests.swift */,
 			);
 			path = "Model Tests";
 			sourceTree = "<group>";
@@ -535,6 +552,7 @@
 			isa = PBXGroup;
 			children = (
 				46D0A56623CDC6E0009DC2E6 /* MockCitiesTableView.swift */,
+				46A9F25323D0B18C00FECE08 /* MockNetworkFetcher.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -766,13 +784,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46A9F25223D0AD9800FECE08 /* NetworkFetcherTests.swift in Sources */,
 				4651A9AA23CC828900985EDC /* TestStringToDateConversion.swift in Sources */,
+				46A9F25823D0CF5000FECE08 /* SensorValuesMeasurementsTests.swift in Sources */,
 				46D0A56423CDBB32009DC2E6 /* CitiesPresenterTests.swift in Sources */,
+				46A9F25623D0BB7C00FECE08 /* MockSensorNetworkFetcherTests.swift in Sources */,
+				46A9F25423D0B18C00FECE08 /* MockNetworkFetcher.swift in Sources */,
 				46D0A56723CDC6E0009DC2E6 /* MockCitiesTableView.swift in Sources */,
 				46D0A55C23CD9D59009DC2E6 /* CityStructTests.swift in Sources */,
 				4655BAEE23CF78E600C388BA /* SearchServiceTests.swift in Sources */,
 				46384BE623CF12210041AD91 /* AverageArrayExtensionTests.swift in Sources */,
 				46002D6823CD9348009425AE /* CitiesViewControllerTests.swift in Sources */,
+				46A9F24C23D0A99B00FECE08 /* SensorDataServiceTests.swift in Sources */,
+				46A9F25023D0AB0700FECE08 /* SensorStateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

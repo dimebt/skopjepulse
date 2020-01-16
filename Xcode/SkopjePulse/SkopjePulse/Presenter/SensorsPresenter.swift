@@ -36,7 +36,7 @@ class SensorsPresenter: NSObject {
     //  MARK: - Publisher (It publishes values over time, specificly this is the text from the UISearchBar)
     @Published public var searchText: String = ""
     
-    //  MARK: - Subscriber
+    //  MARK: - Subscriber, receives publisher value changes
     public var searchTextSubscriber: AnyCancellable?
     
     init(city: City,

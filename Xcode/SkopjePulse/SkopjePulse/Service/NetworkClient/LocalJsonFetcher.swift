@@ -10,7 +10,8 @@ import Foundation
 
 //  MARK: - Generic local json fetcher not used in app
 class LocalJsonFetcher<T: Decodable>: FetchService {
-    
+    var timeoutInterval: TimeInterval = 30.0
+    var request: URLRequest!
     func fetch(from url: URL, completion: @escaping (Result<T, Error>) -> Void) {
         do {
             let path = Bundle.main.path(forResource: url.absoluteString, ofType: "json")

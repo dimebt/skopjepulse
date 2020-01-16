@@ -18,15 +18,6 @@ class AverageArrayExtensionTests: XCTestCase {
     override func tearDown() {
         
     }
-    
-    func testAverage_onEmptyArray() {
-//        let stubs: [Int] = []
-//        let sut = stubs.average(values: stubs)
-//        
-//        XCTAssertNotNil(stubs)
-//        XCTAssertNotNil(stubs.count)
-//        XCTAssertEqual(sut, 2)
-    }
 
     func testAverageForGivenInput123() {
         let stubs = [1, 2, 3]
