@@ -8,13 +8,20 @@
 
 import Foundation
 
+//  MARK: - FetchService Protocol that has fetching functionality for associated type
+// I'm using for implementing different fetchers for different types of data in this case
+// sensors form the REST API [Sensor] and sensors data for the last 24h [SensorData]
+protocol FetchService {
+    associatedtype T
+    func fetch(from url: URL, completion: @escaping (Result<T,Error>) -> Void)
+}
+
+//  MARK: - Generic network fetcher
 class NetworkFetcher<T: Decodable>: FetchService {
     
     func fetch(from url: URL, completion: @escaping (Result<T, Error>) -> Void) {
-        //guard let url = URL(string: url)  else { return }
         let request = URLRequest(url: url, cachePolicy: URLRequest.CachePolicy.reloadIgnoringLocalCacheData, timeoutInterval: 30.0)
         URLSession.shared.dataTask(with: request) { (data, response, err) in
-            //print(response.debugDescription)
             if let error = err {
                 completion(.failure(error))
             }

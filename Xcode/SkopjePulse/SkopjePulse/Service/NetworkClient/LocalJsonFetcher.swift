@@ -8,6 +8,7 @@
 
 import Foundation
 
+//  MARK: - Generic local json fetcher not used in app
 class LocalJsonFetcher<T: Decodable>: FetchService {
     
     func fetch(from url: URL, completion: @escaping (Result<T, Error>) -> Void) {

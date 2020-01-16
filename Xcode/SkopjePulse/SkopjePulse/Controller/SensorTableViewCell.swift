@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol SensorCellDelegate: class {
+    func toggle(sensor: Sensor, with state: SensorState)
+}
+
 class SensorTableViewCell: UITableViewCell {
     
     private var state: SensorState = .enabled

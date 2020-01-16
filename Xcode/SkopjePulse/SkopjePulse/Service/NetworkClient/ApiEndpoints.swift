@@ -17,10 +17,7 @@ import Foundation
     https://[CITY].pulse.eco/rest/sensor
 
     - get sensor data for city
-    https://[CITY].pulse.eco/rest/data24h
- 
-
-
+    https://[CITY].pulse.eco/rest/data24h 
 */
 
 struct PulseEco {
@@ -89,7 +86,7 @@ struct EndpointFactory {
             guard let url = URL(string: "https://\(city.name.lowercased().replacingOccurrences(of: " ", with: "-")).pulse.eco/rest/sensor") else { return nil}
             return url
         case .Data24h:
-            guard let url = URL(string: "https://\(city.name.lowercased()).pulse.eco/rest/data24h") else { return nil}
+            guard let url = URL(string: "https://\(city.name.lowercased().replacingOccurrences(of: " ", with: "-")).pulse.eco/rest/data24h") else { return nil}
             return url
         }
     }

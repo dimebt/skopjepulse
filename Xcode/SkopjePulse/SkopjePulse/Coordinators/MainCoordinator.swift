@@ -46,10 +46,20 @@ class MainCoordinator: Coordinator {
     }
     
     func hideLoader() {
-        if let _ = navigationController.topViewController as? LoadingViewController {
-            DispatchQueue.main.asyncAfter(deadline: .now()) {
+        DispatchQueue.main.async() {
+            if let _ = self.navigationController.topViewController as? LoadingViewController {
                 self.navigationController.popViewController(animated: false)
             }
         }
     }
+    
+    func showSomethingWentWrong() {
+        DispatchQueue.main.async() {
+            let somethingWentWrong = SomethingWentWrongViewController.instantiate()
+            somethingWentWrong.coordinator = self
+            self.navigationController.pushViewController(somethingWentWrong, animated: false)
+        }
+        
+    }
+    
 }

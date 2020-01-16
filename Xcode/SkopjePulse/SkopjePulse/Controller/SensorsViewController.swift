@@ -94,6 +94,8 @@ extension SensorsViewController: SensorsPresenterDelegate {
     }
     
     func errorFetching(error: Error) {
+        coordinator?.hideLoader()
+        coordinator?.showSomethingWentWrong()
     }
     
     func showSensorDetails(city: City, sensor: Sensor, sensorData: SensorData) {

@@ -76,7 +76,79 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q1d-Qd-UQU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-720.28985507246387" y="138.61607142857142"/>
+            <point key="canvasLocation" x="-1339" y="139"/>
+        </scene>
+        <!--Something Went Wrong View Controller-->
+        <scene sceneID="f58-LS-8u2">
+            <objects>
+                <viewController storyboardIdentifier="SomethingWentWrongViewController" id="mwW-Ix-CVO" customClass="SomethingWentWrongViewController" customModule="SkopjePulse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z0m-CU-UcB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nRe-ZG-heg" customClass="GradientView" customModule="SkopjePulse" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jmw-4v-7eP">
+                                        <rect key="frame" x="99.5" y="340.5" width="215" height="215"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="jmw-4v-7eP" secondAttribute="height" multiplier="1:1" id="ZuD-wp-bMh"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something went wrong.." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPo-US-60P">
+                                        <rect key="frame" x="110" y="655.5" width="194" height="22"/>
+                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="GPo-US-60P" firstAttribute="top" secondItem="jmw-4v-7eP" secondAttribute="bottom" constant="100" id="2Yd-5f-xFa"/>
+                                    <constraint firstItem="jmw-4v-7eP" firstAttribute="centerY" secondItem="nRe-ZG-heg" secondAttribute="centerY" id="8Bt-z1-qc0"/>
+                                    <constraint firstItem="jmw-4v-7eP" firstAttribute="centerX" secondItem="nRe-ZG-heg" secondAttribute="centerX" id="8Cm-4y-HoS"/>
+                                    <constraint firstItem="GPo-US-60P" firstAttribute="centerX" secondItem="jmw-4v-7eP" secondAttribute="centerX" id="lof-dj-fYf"/>
+                                    <constraint firstItem="jmw-4v-7eP" firstAttribute="height" secondItem="nRe-ZG-heg" secondAttribute="height" multiplier="0.24" id="tEp-wR-ylt"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                        <color key="value" red="0.074509803920000006" green="0.062745098040000002" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                        <color key="value" red="0.074509803920000006" green="0.062745098040000002" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNm-l9-rRm" userLabel="Dismiss">
+                                <rect key="frame" x="356" y="64" width="38" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="Dg8-to-KKP"/>
+                                    <constraint firstAttribute="height" constant="38" id="eHA-rL-kUS"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="dismiss:" destination="mwW-Ix-CVO" eventType="touchUpInside" id="PwF-br-jhA"/>
+                                    <action selector="dismiss:" destination="qgA-bD-fo6" eventType="touchUpInside" id="vO1-Ah-7hf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nRe-ZG-heg" firstAttribute="leading" secondItem="z0m-CU-UcB" secondAttribute="leading" id="FGT-7g-l8x"/>
+                            <constraint firstAttribute="bottom" secondItem="nRe-ZG-heg" secondAttribute="bottom" id="FeJ-vg-9Km"/>
+                            <constraint firstItem="QRT-C1-E31" firstAttribute="trailing" secondItem="qNm-l9-rRm" secondAttribute="trailing" constant="20" id="O7n-LP-ofk"/>
+                            <constraint firstItem="qNm-l9-rRm" firstAttribute="top" secondItem="QRT-C1-E31" secondAttribute="top" constant="20" id="T9M-T7-wEb"/>
+                            <constraint firstItem="nRe-ZG-heg" firstAttribute="top" secondItem="z0m-CU-UcB" secondAttribute="top" id="m4A-xt-cW7"/>
+                            <constraint firstAttribute="trailing" secondItem="nRe-ZG-heg" secondAttribute="trailing" id="sx5-2Y-X9d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QRT-C1-E31"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c1m-1I-tu0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-617.39130434782612" y="142.63392857142856"/>
         </scene>
         <!--Cities View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -332,7 +404,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average sensor data for sensor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5h-x8-lkR">
-                                <rect key="frame" x="20" y="148" width="223.5" height="19"/>
+                                <rect key="frame" x="20" y="148" width="209.5" height="19"/>
                                 <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -355,7 +427,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sensor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7B-t7-mIy">
-                                <rect key="frame" x="20" y="187" width="79" height="30"/>
+                                <rect key="frame" x="20" y="187" width="75.5" height="30"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>

@@ -8,15 +8,16 @@
 
 import Foundation
 
-
+//  MARK: - Protocol that has search functionality for associated type
+// I'm using for implementing search functionality of the cities and sensors
 protocol SearchService {
     associatedtype T
     var queryResults: T? { get set }
     func search(term: String, bag: T)
 }
 
-
-class CitySearchService {
+//  MARK: - Search service for searching a [City]
+class CitySearchService: SearchService {
     
     var queryResults: [City]?
     
@@ -31,7 +32,8 @@ class CitySearchService {
     }
 }
 
-class SensorSearchService {
+//  MARK: - Search service for searching a [Sensor]
+class SensorSearchService: SearchService {
     
     var queryResults: Sensors?
     

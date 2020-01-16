@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		46002D6823CD9348009425AE /* CitiesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46002D6723CD9348009425AE /* CitiesViewControllerTests.swift */; };
+		460A280C23D095190016E37E /* 3146-404page.json in Resources */ = {isa = PBXBuildFile; fileRef = 460A280B23D095190016E37E /* 3146-404page.json */; };
+		460A281423D095B00016E37E /* SomethingWentWrongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A281323D095B00016E37E /* SomethingWentWrongViewController.swift */; };
 		4615EE1D23CB1CC900595F77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4615EE1C23CB1CC900595F77 /* AppDelegate.swift */; };
 		4615EE1F23CB1CC900595F77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4615EE1E23CB1CC900595F77 /* SceneDelegate.swift */; };
 		4615EE2123CB1CC900595F77 /* CitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4615EE2023CB1CC900595F77 /* CitiesViewController.swift */; };
@@ -17,7 +19,6 @@
 		4615EE2C23CB1CC900595F77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4615EE2A23CB1CC900595F77 /* Main.storyboard */; };
 		4615EE2E23CB1CCE00595F77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4615EE2D23CB1CCE00595F77 /* Assets.xcassets */; };
 		4615EE3123CB1CCE00595F77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4615EE2F23CB1CCE00595F77 /* LaunchScreen.storyboard */; };
-		4615EE4E23CB248A00595F77 /* FetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4615EE4D23CB248A00595F77 /* FetchService.swift */; };
 		4615EE5323CB455D00595F77 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4615EE5223CB455D00595F77 /* Sensor.swift */; };
 		4615EE5523CB46B800595F77 /* SensorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4615EE5423CB46B800595F77 /* SensorData.swift */; };
 		4615EE5823CB480A00595F77 /* ApiEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4615EE5723CB480A00595F77 /* ApiEndpoints.swift */; };
@@ -52,7 +53,6 @@
 		466BCA4723CC79960003F469 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466BCA4623CC79960003F469 /* String.swift */; };
 		466BCA4A23CC79F40003F469 /* DateBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466BCA4923CC79F40003F469 /* DateBuilder.swift */; };
 		467DF71923CE1AE0009FCECE /* SensorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467DF71823CE1AE0009FCECE /* SensorState.swift */; };
-		467DF71B23CE1C15009FCECE /* SensorStateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467DF71A23CE1C15009FCECE /* SensorStateDelegate.swift */; };
 		46A09C8223CC882C00BDFD4C /* rest24hBitola.json in Resources */ = {isa = PBXBuildFile; fileRef = 46A09C8123CC882C00BDFD4C /* rest24hBitola.json */; };
 		46A09C8423CC889500BDFD4C /* LocalJsonFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A09C8323CC889500BDFD4C /* LocalJsonFetcher.swift */; };
 		46AB756323CC968D0003097F /* CitiesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB756223CC968D0003097F /* CitiesPresenter.swift */; };
@@ -86,6 +86,9 @@
 /* Begin PBXFileReference section */
 		321FE7E83C7BF4536C55E384 /* Pods_SkopjePulse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkopjePulse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46002D6723CD9348009425AE /* CitiesViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewControllerTests.swift; sourceTree = "<group>"; };
+		460A280B23D095190016E37E /* 3146-404page.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "3146-404page.json"; path = "../../../../../Assets/Lottie/3146-404page.json"; sourceTree = "<group>"; };
+		460A281223D0959E0016E37E /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		460A281323D095B00016E37E /* SomethingWentWrongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomethingWentWrongViewController.swift; sourceTree = "<group>"; };
 		4615EE1923CB1CC900595F77 /* SkopjePulse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkopjePulse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4615EE1C23CB1CC900595F77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4615EE1E23CB1CC900595F77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,7 +100,6 @@
 		4615EE2D23CB1CCE00595F77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4615EE3023CB1CCE00595F77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4615EE3223CB1CCE00595F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4615EE4D23CB248A00595F77 /* FetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchService.swift; sourceTree = "<group>"; };
 		4615EE5223CB455D00595F77 /* Sensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
 		4615EE5423CB46B800595F77 /* SensorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorData.swift; sourceTree = "<group>"; };
 		4615EE5723CB480A00595F77 /* ApiEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoints.swift; sourceTree = "<group>"; };
@@ -134,7 +136,6 @@
 		466BCA4623CC79960003F469 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		466BCA4923CC79F40003F469 /* DateBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateBuilder.swift; sourceTree = "<group>"; };
 		467DF71823CE1AE0009FCECE /* SensorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorState.swift; sourceTree = "<group>"; };
-		467DF71A23CE1C15009FCECE /* SensorStateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorStateDelegate.swift; sourceTree = "<group>"; };
 		46A09C8123CC882C00BDFD4C /* rest24hBitola.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = rest24hBitola.json; sourceTree = "<group>"; };
 		46A09C8323CC889500BDFD4C /* LocalJsonFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalJsonFetcher.swift; sourceTree = "<group>"; };
 		46AB756223CC968D0003097F /* CitiesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesPresenter.swift; sourceTree = "<group>"; };
@@ -142,7 +143,7 @@
 		46AB756623CC9EE70003097F /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		46AB756823CCAF220003097F /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		46ABF00223CFD9A0004A31C9 /* SensorDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDataService.swift; sourceTree = "<group>"; };
-		46ABF00423CFEB91004A31C9 /* PulseUISearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PulseUISearchBar.swift; path = UISearchBar/PulseUISearchBar.swift; sourceTree = "<group>"; };
+		46ABF00423CFEB91004A31C9 /* PulseUISearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseUISearchBar.swift; sourceTree = "<group>"; };
 		46ABF00A23D00EFA004A31C9 /* SensorStatePersister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorStatePersister.swift; sourceTree = "<group>"; };
 		46C3D37E23CE7A6200CF363E /* AverageDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AverageDataViewController.swift; sourceTree = "<group>"; };
 		46C3D38023CE7C0700CF363E /* AverageDataPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AverageDataPresenter.swift; sourceTree = "<group>"; };
@@ -206,6 +207,39 @@
 			path = "ViewController Tests";
 			sourceTree = "<group>";
 		};
+		460A280A23D08F3E0016E37E /* UISearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				46ABF00423CFEB91004A31C9 /* PulseUISearchBar.swift */,
+			);
+			path = UISearchBar;
+			sourceTree = "<group>";
+		};
+		460A280D23D0952D0016E37E /* SomethingWentWrong Controller */ = {
+			isa = PBXGroup;
+			children = (
+				460A281323D095B00016E37E /* SomethingWentWrongViewController.swift */,
+			);
+			path = "SomethingWentWrong Controller";
+			sourceTree = "<group>";
+		};
+		460A281023D095910016E37E /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				460A281123D0959E0016E37E /* Loading controller */,
+				460A280D23D0952D0016E37E /* SomethingWentWrong Controller */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		460A281123D0959E0016E37E /* Loading controller */ = {
+			isa = PBXGroup;
+			children = (
+				460A281223D0959E0016E37E /* LoadingViewController.swift */,
+			);
+			path = "Loading controller";
+			sourceTree = "<group>";
+		};
 		4615EE1023CB1CC900595F77 = {
 			isa = PBXGroup;
 			children = (
@@ -251,10 +285,8 @@
 		4615EE2223CB1CC900595F77 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				4615EE4D23CB248A00595F77 /* FetchService.swift */,
 				4615EE2323CB1CC900595F77 /* Storyboarded.swift */,
 				4615EE2523CB1CC900595F77 /* Coordinator.swift */,
-				467DF71A23CE1C15009FCECE /* SensorStateDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -368,9 +400,10 @@
 		462ADAC723CC8E2000812D06 /* Reusable Components */ = {
 			isa = PBXGroup;
 			children = (
+				460A281023D095910016E37E /* UIViewController */,
 				4652A30823CCEC230046BBA7 /* Loading controller */,
+				460A280A23D08F3E0016E37E /* UISearchBar */,
 				462ADAC823CC8E3000812D06 /* UIView */,
-				46ABF00423CFEB91004A31C9 /* PulseUISearchBar.swift */,
 			);
 			path = "Reusable Components";
 			sourceTree = "<group>";
@@ -419,6 +452,7 @@
 		4652A31223CCEC690046BBA7 /* Lottie Files */ = {
 			isa = PBXGroup;
 			children = (
+				460A280B23D095190016E37E /* 3146-404page.json */,
 				4652A30E23CCEC670046BBA7 /* 927-triangle-loading.json */,
 			);
 			path = "Lottie Files";
@@ -602,6 +636,7 @@
 				462ADAC123CC8C3500812D06 /* Lato-Black.ttf in Resources */,
 				462ADAC623CC8C3500812D06 /* Lato-Thin.ttf in Resources */,
 				462ADAC223CC8C3500812D06 /* Lato-LightItalic.ttf in Resources */,
+				460A280C23D095190016E37E /* 3146-404page.json in Resources */,
 				462ADABF23CC8C3500812D06 /* Lato-BlackItalic.ttf in Resources */,
 				462ADABE23CC8C3500812D06 /* Lato-ThinItalic.ttf in Resources */,
 				462ADAC423CC8C3500812D06 /* Lato-Regular.ttf in Resources */,
@@ -689,7 +724,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4615EE4E23CB248A00595F77 /* FetchService.swift in Sources */,
 				4668ADBB23CEE70000CEFADD /* AverageData.swift in Sources */,
 				4652A30523CCD93B0046BBA7 /* SensorTableViewCell.swift in Sources */,
 				46267C7323CF87EE005D076D /* SearchService.swift in Sources */,
@@ -698,10 +732,10 @@
 				462ADAAD23CC8BA500812D06 /* CityTableViewCell.swift in Sources */,
 				4615EE2923CB1CC900595F77 /* MainCoordinator.swift in Sources */,
 				4615EE5523CB46B800595F77 /* SensorData.swift in Sources */,
+				460A281423D095B00016E37E /* SomethingWentWrongViewController.swift in Sources */,
 				466BCA4723CC79960003F469 /* String.swift in Sources */,
 				4652A30C23CCEC230046BBA7 /* LoadingViewController.swift in Sources */,
 				46AB756923CCAF220003097F /* DateFormatter.swift in Sources */,
-				467DF71B23CE1C15009FCECE /* SensorStateDelegate.swift in Sources */,
 				4615EE1D23CB1CC900595F77 /* AppDelegate.swift in Sources */,
 				46AB756523CC9EB80003097F /* SensorsPresenter.swift in Sources */,
 				46384BE323CF119E0041AD91 /* Array.swift in Sources */,

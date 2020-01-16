@@ -8,6 +8,7 @@
 
 import Foundation
 
+//  MARK: - SensorDataService for processing the fetched data from the REST API ednpoints
 class SensorDataService {
     
     public var averageData: [AverageData]!
