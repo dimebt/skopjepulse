@@ -38,6 +38,7 @@
 		462ADAC523CC8C3500812D06 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 462ADABB23CC8C3400812D06 /* Lato-Light.ttf */; };
 		462ADAC623CC8C3500812D06 /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 462ADABC23CC8C3500812D06 /* Lato-Thin.ttf */; };
 		462ADACA23CC8E4000812D06 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462ADAC923CC8E4000812D06 /* GradientView.swift */; };
+		4630523023D1083800295CB1 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4630522F23D1083800295CB1 /* Feedback.swift */; };
 		46384BE323CF119E0041AD91 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46384BE223CF119E0041AD91 /* Array.swift */; };
 		46384BE623CF12210041AD91 /* AverageArrayExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46384BE523CF12210041AD91 /* AverageArrayExtensionTests.swift */; };
 		46384BE823CF26770041AD91 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46384BE723CF26770041AD91 /* Double.swift */; };
@@ -125,6 +126,7 @@
 		462ADABB23CC8C3400812D06 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Light.ttf"; path = "../../../../../Assets/Fonts/Lato/Lato-Light.ttf"; sourceTree = "<group>"; };
 		462ADABC23CC8C3500812D06 /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Thin.ttf"; path = "../../../../../Assets/Fonts/Lato/Lato-Thin.ttf"; sourceTree = "<group>"; };
 		462ADAC923CC8E4000812D06 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		4630522F23D1083800295CB1 /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
 		46384BE223CF119E0041AD91 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		46384BE523CF12210041AD91 /* AverageArrayExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AverageArrayExtensionTests.swift; sourceTree = "<group>"; };
 		46384BE723CF26770041AD91 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
@@ -412,6 +414,7 @@
 		462ADAC723CC8E2000812D06 /* Reusable Components */ = {
 			isa = PBXGroup;
 			children = (
+				4630522E23D1081D00295CB1 /* Feedback */,
 				460A281023D095910016E37E /* UIViewController */,
 				4652A30823CCEC230046BBA7 /* Loading controller */,
 				460A280A23D08F3E0016E37E /* UISearchBar */,
@@ -426,6 +429,14 @@
 				462ADAC923CC8E4000812D06 /* GradientView.swift */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		4630522E23D1081D00295CB1 /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				4630522F23D1083800295CB1 /* Feedback.swift */,
+			);
+			path = Feedback;
 			sourceTree = "<group>";
 		};
 		46384BE423CF11F60041AD91 /* Logic */ = {
@@ -744,6 +755,7 @@
 			files = (
 				4668ADBB23CEE70000CEFADD /* AverageData.swift in Sources */,
 				4652A30523CCD93B0046BBA7 /* SensorTableViewCell.swift in Sources */,
+				4630523023D1083800295CB1 /* Feedback.swift in Sources */,
 				46267C7323CF87EE005D076D /* SearchService.swift in Sources */,
 				46C3D38123CE7C0700CF363E /* AverageDataPresenter.swift in Sources */,
 				4615EE2123CB1CC900595F77 /* CitiesViewController.swift in Sources */,

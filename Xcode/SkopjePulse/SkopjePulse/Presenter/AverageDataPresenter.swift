@@ -42,6 +42,7 @@ class AverageDataPresenter {
     
     //  MARK: - Will load measurements data for selected particles on the segmentet control and notify the delegate
     public func processAverageData(for segmentSelection: Int) {
+        Feedback.shared.execute(with: .medium)
         var particleType = SensorTypeEnum.pm10
         switch segmentSelection {
         case 0:
